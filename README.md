@@ -8,7 +8,7 @@
 - Identify any anticipated challenges or potential issues that may arise during development.
 ```
 
-- Sci-Fi first person shooter where you play as a slime creature.
+- Sci-Fi first person shooter where you play as a humanoid slime creature.
 - I've been influenced by my playing habits, and I wanted to move away from my usual genre which was 3D platformers.
 - I wish to include multiplayer but that's new to me.
 - I wish to publish this game professionally, working with professional pipelines (detail these later) (uploading builds to platforms, working with version control, etc.)
