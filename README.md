@@ -58,6 +58,9 @@
 
 #### Bioshock
 - Bioshock is a story driven first person shooter developed by 2K Boston
+- The gameplay of Bioshock is a mix of exploring the environment, solving small puzzles and learning about the game's world, and fast-paced first person gunplay, featuring combining several different guns, and also magic powers such as blasts of electricity or grabbing objects with telekenesis. The player is encouraged to experiment with different weapon/power combos to approach different scenarios.
+- The level design is fairly open, with lots of areas to explore, side areas with extra items to collect, and larger arena-like areas where the player must fight several enemies.
+
 
 ### Academic Sources  
 - Research academic papers, books, or articles that provide theoretical guidance for your project. Include a brief summary of each source.  
