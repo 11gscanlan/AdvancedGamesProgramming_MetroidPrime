@@ -63,12 +63,21 @@
 
 
 ### Academic Sources  
+```
 - Research academic papers, books, or articles that provide theoretical guidance for your project. Include a brief summary of each source.  
 - Describe how the academic research applies to your project and shapes your design and development decisions.
+```
+- For an academic source, I chose to look at Story and Recall in First-Person shooters, (Pinchbeck, 2008). The article discusses a study examining how non-gameplay devices in FPS games affect how well players can remember the story of a game.
+- 
 
 ### Documentation Sources  
+```
 - Investigate relevant documentation, tutorials, or instructional videos that provide technical insights into your tasks. Summarise the content and its relevance to your project.  
 - Explain how this technical knowledge supports your project work and guides your decision-making process.
+```
+- To learn how to create Multiplayer, I looked at unreal documentation, as well as a few YouTube videos.
+- Looking at Documentation for Testing Multiplayer (Testing Multiplayer in Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community, s.d.) showed me the basics of how to create a basic multiplayer mode, including adding other players to the level, and splitting the screen so the second player has a view.
+- 
 
 ## Implementation
 
