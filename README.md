@@ -59,7 +59,9 @@
 #### Bioshock
 - Bioshock is a story driven first person shooter developed by 2K Boston
 - The gameplay of Bioshock is a mix of exploring the environment, solving small puzzles and learning about the game's world, and fast-paced first person gunplay, featuring combining several different guns, and also magic powers such as blasts of electricity or grabbing objects with telekenesis. The player is encouraged to experiment with different weapon/power combos to approach different scenarios.
-- The level design is fairly open, with lots of areas to explore, side areas with extra items to collect, and larger arena-like areas where the player must fight several enemies.
+- The level design is fairly open, with a mix of large, open areas to explore, more open areas where the player has to fight numerous enemies, and optional side areas that pose challenges the player must overcome, that then reward them with rewards such as extra ammo, or money to spend on upgrades.
+- The progression of Bioshock involves travelling to different areas with a set objective the player must reach. Though how they reach that goal is up to them, as there is usually multiple ways the player can reach the destination, such as different routes to take, or different approaches to exploration that affect what enemies they may or may not encounter. 
+- Each area usually has a new weapon that the player can unlock, making each area fresh as the player always has a new weapon to try out, and see what upgrades they can get for it.
 
 
 ### Academic Sources  
@@ -67,17 +69,22 @@
 - Research academic papers, books, or articles that provide theoretical guidance for your project. Include a brief summary of each source.  
 - Describe how the academic research applies to your project and shapes your design and development decisions.
 ```
-- For an academic source, I chose to look at Story and Recall in First-Person shooters, (Pinchbeck, 2008). The article discusses a study examining how non-gameplay devices in FPS games affect how well players can remember the story of a game.
-- 
+- For an academic source, I chose to look at Flow and Immersion in First-Person shooters (Flow and immersion in first-person shooters | Proceedings of the 2008 Conference on Future Play: Research, Play, Share, s.d.).
+- The article reports the results of a psychological study about how different aspects of Half-Life 2 affects player's gameplay experience.
+- The paper reports that players were more engaged when playing through levels that were designed for combat-oriented flow.
+- The paper also reports boredom and how different aspects of the level design can lead to players getting bored, such as linear level deisgn, weak opponents with little visual vareity, repeating textures and models, limited choices of weapons, or high amounts of rewards such as health, and ammo supplies.
+- I chose to analyse this source as the level design is a large factor in my game, and I want to avoid having the player be constantly bored when playing my game. Which means there should be a focus on making the level design interesting to explore, and also balancing the game's challenge, such as enemy vareity and difficulty, and also the frequency of health pickups, checkpoints and weapon unlocks.
 
 ### Documentation Sources  
 ```
 - Investigate relevant documentation, tutorials, or instructional videos that provide technical insights into your tasks. Summarise the content and its relevance to your project.  
 - Explain how this technical knowledge supports your project work and guides your decision-making process.
 ```
-- To learn how to create Multiplayer, I looked at unreal documentation, as well as a few YouTube videos.
+- To learn how to create Multiplayer, I started by looking at unreal documentation.
 - Looking at Documentation for Testing Multiplayer (Testing Multiplayer in Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community, s.d.) showed me the basics of how to create a basic multiplayer mode, including adding other players to the level, and splitting the screen so the second player has a view.
-- 
+- I watched a few YouTube videos as well since I was having difficulty actually assigning input to the second player.
+I looked at a video about the basics of multiplayer in unreal (How to set up local/split-screen Multiplayer in Unreal Engine 5!, 2023), as well as a seperate video on creating multiple players and then assigning different player input to both of them (UE5 Fighting Game Tutorial: Local Multiplayer Game With 2 Gamepads | TrueFGE & Unreal Engine 5, 2023).
+- After watching these videos, I managed to figure out how to control both players.
 
 ## Implementation
 
@@ -157,6 +164,8 @@ The 25 Best GameCube Games of All Time - IGN (s.d.) At: https://www.ign.com/arti
 The World Design of Metroid Prime | Boss Keys - YouTube (s.d.) At: https://www.youtube.com/watch?v=zyoGD6uwCmk (Accessed  10/02/2025).
 
 Pinchbeck, D. (2008) 'Story and recall in first person shooters' In: International Journal of Computer Games Technology pp.1–7.
+
+Flow and immersion in first-person shooters | Proceedings of the 2008 Conference on Future Play: Research, Play, Share (s.d.) At: https://dl.acm.org/doi/10.1145/1496984.1496998 (Accessed  10/03/2025).
 
 
 ## Declared Assets
