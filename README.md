@@ -8,10 +8,14 @@
 - Identify any anticipated challenges or potential issues that may arise during development.
 ```
 
+```
 - Sci-Fi first person shooter where you play as a humanoid slime creature.
 - I've been influenced by my playing habits, and I wanted to move away from my usual genre which was 3D platformers.
 - I wish to include multiplayer but that's new to me.
-- I wish to publish this game professionally, working with professional pipelines (detail these later) (uploading builds to platforms, working with version control, etc.)
+- I wish to publish this game professionally, working with professional pipelines (detail these later) (uploading builds to platforms, working with version control, etc.) 
+```
+
+
 
 ## Research
 
@@ -87,6 +91,10 @@ I looked at a video about the basics of multiplayer in unreal (How to set up loc
 - After watching these videos, I managed to figure out how to control both players.
 
 ## Implementation
+
+<iframe src="https://blueprintue.com/render/krpxksl9/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+Figure 1. gdngdsngsdngiods gfs
+
 
 ### Process
 - Provide a step-by-step breakdown of your development process, including key milestones and decisions made throughout the project.  
