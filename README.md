@@ -7,6 +7,7 @@
 - Outline the initial goals or objectives you aim to achieve.  
 - Identify any anticipated challenges or potential issues that may arise during development.
 ```
+My game is a story driven first person shooter with a sci-fi setting. The player controls a humanoid slime creature, and the gameplay revolves around the slime's ability to morph into and out of a spherical blob form that allows them to move around quicker, stick to walls, and squeeze through pipes and grates, which they would not be able to normally do. The gameplay also involves gunplay, as the player will encounter enemies that they must defeat by using various different sciency weapons found throughout the game.
 
 ```
 - Sci-Fi first person shooter where you play as a humanoid slime creature.
@@ -14,8 +15,9 @@
 - I wish to include multiplayer but that's new to me.
 - I wish to publish this game professionally, working with professional pipelines (detail these later) (uploading builds to platforms, working with version control, etc.) 
 ```
+I wanted to create a first-person shooter as I was influenced by my playing habits, and wanted to move away from my usual genre which was 3D platformers. I wish to include multiplayer as I felt nostalgic towards older games that had PVP multiplayer modes, pitting friends against eachother in deathmatch or capture the flag modes.
 
-
+I want to publish this game professionally, working with professional pipelines (***detail these later***) such as uploading builds to platforms using Github, working with version control, ***etc***.
 
 ## Research
 
@@ -92,9 +94,48 @@ I looked at a video about the basics of multiplayer in unreal (How to set up loc
 
 ## Implementation
 
-<iframe src="https://blueprintue.com/render/krpxksl9/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
-Figure 1. gdngdsngsdngiods gfs
+### Player
 
+- Setup (viewmodel, helmet, etc.)
+
+- Movement (Running, Jump/Double Jump)
+
+- Slimeball
+
+- Lock-On
+
+- HUD (Health, Current Weapon, etc)
+
+### Pause Menu
+
+### Weapons
+
+- The weapon sprites are 2D Flipbooks, I created them this way to save time on development due to the 14-week time
+- All of the systems are held in a data table, containing the sprites, firing noise, projectiles, and particle systems.
+- The Data table is accessed whenever the player swaps or fires their weapon.
+
+### Projectiles
+
+- Movement
+
+- Damage
+
+### Scrap
+I wanted to create a currency that the player can use to buy upgrades
+<iframe src="https://blueprintue.com/render/krpxksl9/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+Figure 1. On Begin Overlap for Scrap's sphere; moves towards player, and then plays a particle, sound, and increases the player's scrap count by a random amount from 2-5.
+
+### Hook/Ropeswing
+
+### Enemies
+- AI: Movement
+- Ai: Shooting
+- Drone Enemy
+
+### Objects
+
+- Pipe Crawlspace
+- Fixed Camera Sections
 
 ### Process
 - Provide a step-by-step breakdown of your development process, including key milestones and decisions made throughout the project.  
