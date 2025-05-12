@@ -103,6 +103,11 @@ I looked at a video about the basics of multiplayer in unreal (How to set up loc
 - Slimeball
 
 - Lock-On
+<iframe src="https://blueprintue.com/blueprint/3ik4s_kw/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+Figure 1. Event tick loop, keeps focusing on the locked actor so long as the actor is still relevant and the player hasn't released the keybind.
+
+
+
 
 - HUD (Health, Current Weapon, etc)
 
@@ -123,7 +128,7 @@ I looked at a video about the basics of multiplayer in unreal (How to set up loc
 ### Scrap
 I wanted to create a currency that the player can use to buy upgrades
 <iframe src="https://blueprintue.com/render/krpxksl9/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
-Figure 1. On Begin Overlap for Scrap's sphere; moves towards player, and then plays a particle, sound, and increases the player's scrap count by a random amount from 2-5.
+Figure 2. On Begin Overlap for Scrap's sphere; moves towards player, and then plays a particle, sound, and increases the player's scrap count by a random amount from 2-5.
 
 ### Hook/Ropeswing
 
@@ -135,6 +140,9 @@ Figure 1. On Begin Overlap for Scrap's sphere; moves towards player, and then pl
 ### Objects
 
 - Pipe Crawlspace
+
+I created the pipe crawlspace by using a spline mesh.
+
 - Fixed Camera Sections
 
 ### Process
