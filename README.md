@@ -46,11 +46,11 @@ I want to publish this game professionally, working with professional pipelines 
 - Explain how these insights apply to your project and influence your decision-making process.
 ```
 #### Metroid Prime
-- Metroid Prime is a Sci-Fi first person shooter developed by Retro Studios Metroid Prime (2002).
-- *Metroid Prime* is considered one of the best video game experiences of all time and the top GameCube game according to IGN(The 25 Best GameCube Games of All Time - IGN, s.d.).
-- The level design in Metroid Prime features large environments comprised of multiple interconnected rooms. (The World Design of Metroid Prime | Boss Keys - YouTube, s.d.)
-- The level design is largely non-linear, there are a lot of paths the player can follow, some take them to other areas of the map, and some areas feature small challenges that the player can complete to get extra items.
-- The gameplay of Metroid Prime consists of combat, puzzle solving and exploration. The combat is divided into both shooting enemies as well as moving to avoid their attacks. This makes the combat unique as it makes every encounter more engaging than other first person shooters that typically feature quite stationary combat based around hiding behind cover and shooting when you get the opportunity.
+Metroid Prime is a Sci-Fi first person shooter developed by Retro Studios Metroid Prime (2002).
+*Metroid Prime* is considered one of the best video game experiences of all time and the top GameCube game according to IGN(The 25 Best GameCube Games of All Time - IGN, s.d.).
+The level design in Metroid Prime features large environments comprised of multiple interconnected rooms. (The World Design of Metroid Prime | Boss Keys - YouTube, s.d.)
+The level design is largely non-linear, there are a lot of paths the player can follow, some take them to other areas of the map, and some areas feature small challenges that the player can complete to get extra items.
+The gameplay of Metroid Prime consists of combat, puzzle solving and exploration. The combat is divided into both shooting enemies as well as moving to avoid their attacks. This makes the combat unique as it makes every encounter more engaging than other first person shooters that typically feature quite stationary combat based around hiding behind cover and shooting when you get the opportunity.
 
 
 (this is what i'm saying, this is what i've got to prove what i'm saying)
@@ -63,11 +63,11 @@ I want to publish this game professionally, working with professional pipelines 
 
 
 #### Bioshock
-- Bioshock is a story driven first person shooter developed by 2K Boston
-- The gameplay of Bioshock is a mix of exploring the environment, solving small puzzles and learning about the game's world, and fast-paced first person gunplay, featuring combining several different guns, and also magic powers such as blasts of electricity or grabbing objects with telekenesis. The player is encouraged to experiment with different weapon/power combos to approach different scenarios.
-- The level design is fairly open, with a mix of large, open areas to explore, more open areas where the player has to fight numerous enemies, and optional side areas that pose challenges the player must overcome, that then reward them with rewards such as extra ammo, or money to spend on upgrades.
-- The progression of Bioshock involves travelling to different areas with a set objective the player must reach. Though how they reach that goal is up to them, as there is usually multiple ways the player can reach the destination, such as different routes to take, or different approaches to exploration that affect what enemies they may or may not encounter. 
-- Each area usually has a new weapon that the player can unlock, making each area fresh as the player always has a new weapon to try out, and see what upgrades they can get for it.
+Bioshock is a story driven first person shooter developed by 2K Boston, released in 2007. The gameplay of Bioshock is a mix of exploring the environment, solving small puzzles and learning about the game's world, and fast-paced first person gunplay. Featuring combining several different guns, and also magic powers such as blasts of electricity or grabbing objects with telekinesis. The player is encouraged to experiment with different weapon/power combos to approach different scenarios (IGN, 2007).
+The level design is fairly open, with a mix of large, open areas to explore, more open arenas where the player has to fight numerous enemies, and optional side areas that pose challenges the player must overcome. They are then rewarded with items such as extra ammo, or money to spend on upgrades.
+The progression of Bioshock involves travelling to different areas with a set objective the player must reach. Though how they reach that goal is up to them, as there are usually multiple ways the player can reach the destination, such as different routes to take, or different approaches that affect what enemies they may encounter. 
+Each area usually has a new weapon that the player can unlock, making each area feel fresh as the player always has a new weapon to try out, and see what upgrades they can get for it.
+
 
 
 ### Academic Sources  
@@ -75,22 +75,20 @@ I want to publish this game professionally, working with professional pipelines 
 - Research academic papers, books, or articles that provide theoretical guidance for your project. Include a brief summary of each source.  
 - Describe how the academic research applies to your project and shapes your design and development decisions.
 ```
-- For an academic source, I chose to look at Flow and Immersion in First-Person shooters (Flow and immersion in first-person shooters | Proceedings of the 2008 Conference on Future Play: Research, Play, Share, s.d.).
-- The article reports the results of a psychological study about how different aspects of Half-Life 2 affects player's gameplay experience.
-- The paper reports that players were more engaged when playing through levels that were designed for combat-oriented flow.
-- The paper also reports boredom and how different aspects of the level design can lead to players getting bored, such as linear level deisgn, weak opponents with little visual vareity, repeating textures and models, limited choices of weapons, or high amounts of rewards such as health, and ammo supplies.
-- I chose to analyse this source as the level design is a large factor in my game, and I want to avoid having the player be constantly bored when playing my game. Which means there should be a focus on making the level design interesting to explore, and also balancing the game's challenge, such as enemy vareity and difficulty, and also the frequency of health pickups, checkpoints and weapon unlocks.
+For an academic source, I chose to look at Flow and Immersion in First-Person shooters (Flow and immersion in first-person shooters | Proceedings of the 2008 Conference on Future Play: Research, Play, Share, s.d.).
+The article reports the results of a psychological study about how different aspects of Half-Life 2 affects player's gameplay experience.
+The paper reports that players were more engaged when playing through levels that were designed for combat-oriented flow.
+The paper also reports boredom and how different aspects of the level design can lead to players getting bored, such as linear level deisgn, weak opponents with little visual vareity, repeating textures and models, limited choices of weapons, or high amounts of rewards such as health, and ammo supplies.
+I chose to analyse this source as the level design is a large factor in my game, and I want to avoid having the player be constantly bored when playing my game. Which means there should be a focus on making the level design interesting to explore, and also balancing the game's challenge, such as enemy vareity and difficulty, and also the frequency of health pickups, checkpoints and weapon unlocks.
 
 ### Documentation Sources  
 ```
 - Investigate relevant documentation, tutorials, or instructional videos that provide technical insights into your tasks. Summarise the content and its relevance to your project.  
 - Explain how this technical knowledge supports your project work and guides your decision-making process.
 ```
-- To learn how to create Multiplayer, I started by looking at unreal documentation.
-- Looking at Documentation for Testing Multiplayer (Testing Multiplayer in Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community, s.d.) showed me the basics of how to create a basic multiplayer mode, including adding other players to the level, and splitting the screen so the second player has a view.
-- I watched a few YouTube videos as well since I was having difficulty actually assigning input to the second player.
-I looked at a video about the basics of multiplayer in unreal (How to set up local/split-screen Multiplayer in Unreal Engine 5!, 2023), as well as a seperate video on creating multiple players and then assigning different player input to both of them (UE5 Fighting Game Tutorial: Local Multiplayer Game With 2 Gamepads | TrueFGE & Unreal Engine 5, 2023).
-- After watching these videos, I managed to figure out how to control both players.
+To learn how to create Multiplayer, I started by looking at unreal documentation at Epic Games (2025) which showed the basics of how to create a basic multiplayer mode, including adding other players to the level, and splitting the screen so the second player has a view. I encountered the problem that the second player was unable to be controlled by the second controller, so I looked at some YouTube videos to have a better understanding on how to get a multiplayer mode working.
+The first youtube video I looked at was a video on creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game. This helped to organise my existing code a little, but it did not solve the issue of the second player not receiving input.
+I watched a separate video which was about creating multiple players and assigning inputs to them in a fighting game by UNREAL ENGINE JOURNEY (2023). This video walked through creating multiple players at the start of the level, and assigning input mapping contexts to both of them, it also mentioned the important detail I was missing, that the input mapping context needs to be assigned to a different ID for each player (player one has an ID of 0, and player two has an ID of 1). I edited code and changed the script that adds multiple players to also assign a different ID to both of them. Doing this allowed the second player to work with a second controller.
 
 ## Implementation
 
@@ -103,7 +101,7 @@ I looked at a video about the basics of multiplayer in unreal (How to set up loc
 - Slimeball
 
 - Lock-On
-<iframe src="https://blueprintue.com/blueprint/3ik4s_kw/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+<iframe src="https://blueprintue.com/render/3ik4s_kw/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 Figure 1. Event tick loop, keeps focusing on the locked actor so long as the actor is still relevant and the player hasn't released the keybind.
 
 
@@ -160,7 +158,27 @@ I created the pipe crawlspace by using a spline mesh.
 - Present feedback or issues identified during testing, using graphs, tables, or visual aids to summarise results.  
 - Describe how these issues were addressed. If any issues were not resolved, provide a clear justification for leaving them unaddressed.
 ```
+Some of the mechanics in the game weren’t explained very well, which meant that blind testers sometimes didn’t know certain mechanics were in the game.
 
+Some areas of the game could be skipped through due to the player’s movement speed, allowing them to ignore combat encounters or challenges.
+
+The playtesters felt the guns were unbalanced, some guns shot faster and dealt more damage making them superior over other guns, and some just weren't worth using.
+
+The player works best in larger areas, as when they are required to perform tight platforming, the momentum can cause the character to fall off the platforms or overshoot.
+
+The lack of sound in the game was a complaint as it made things like the guns less impactful, though that was mostly caused by the University PCs not having access to sound.
+
+Some powers lasted too long, making the player feel overpowered at times.
+The boss encounter door doesn’t lock after entering, allowing them to exit the arena and avoid fighting it.
+
+### How they were addressed
+
+Most of the issues faced could be quite easily fixed, such as the duration of power-ups, the player’s movement speed, and gun damage. As those were simply cases of adjusting variables in the code.
+
+I made a solution to mechanics not being explained very well by having on-screen pop-ups appear explaining mechanics when they became necessary, such as when the player needed to double jump across a gap or shoot a button to open a door.
+To have the boss door lock after the player entered, I added a lock variable to the doors as well as an ID variable, meaning that when the boss spawns, it calls a function that locks the boss door, preventing the player from re-opening it until it is defeated.
+
+There were some issues I couldn’t fix due to time constraints, the biggest issue being the level design and how the player could skip most of the combat encounters. There were only two weeks left in the project when this issue was raised, and therefore it wouldn’t be a good use of time to completely rebuild the level and implement mechanics to prevent the player from progressing until all enemies in the area were defeated. Though it would be a good thing to keep in mind should I decide to continue working on the game after the project has been submitted.
 
 ### Technical Difficulties
 - Identify any technical difficulties encountered during the implementation phase.  
@@ -215,6 +233,8 @@ I created the pipe crawlspace by using a spline mesh.
 ```
 
 ‘Metroid Prime’ (2002). Retro Studios.
+
+'Bioshock' (2007). 2K Boston.
 
 The 25 Best GameCube Games of All Time - IGN (s.d.) At: https://www.ign.com/articles/the-best-gamecube-games-of-all-time (Accessed  10/02/2025).
 
