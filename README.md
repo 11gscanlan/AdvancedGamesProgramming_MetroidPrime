@@ -18,7 +18,7 @@ Slime Blast is a story-driven first person shooter with a sci-fi setting. The pl
 I wanted to move away from my usual genre of 3D platforms, and I have recently been playing first person shooters, so I decided to choose that genre.
 I also want to include multiplayer as I felt nostalgic towards older games that had PVP multiplayer modes, pitting friends against each other in deathmatch or capture the flag modes.
 
-I want to publish this game professionally, working with professional pipelines (***detail these later***) such as uploading builds to platforms using Github, working with version control, ***etc***.
+I want to publish this game professionally, working with professional pipelines such as uploading builds to platforms using Github, making use of game branches and working with version control.
 
 ## Research
 
@@ -28,17 +28,23 @@ I want to publish this game professionally, working with professional pipelines 
 - Identify relevant sources for the project, including articles, documentation, talks, and games.  
 - Detail how these sources have informed your practical work and influenced your approach.
 ```
-- Story Driven FPS
-- Both playing other story-driven games as well as reading articles about them will give me an understanding of how they are designed, as well as the reception surrounding the game at the time and whether people enjoy it.
+I have identified a few key challenges I will likely face while developing this project;
+
+Creating a Story Driven FPS
+I feel the best way to go about creating a story driven First-Person shooter will be by playing other story-driven games as well as reading articles about them to give me an understanding of how they are designed as well as the reception surrounding the games at the time and whether people enjoy them.
 
 ---
 
-- How to deal with multiplayer in Unreal
-- I will be using both Youtube Videos and documentation to learn how to create Multiplayer.
+Multiplayer in Unreal
+I have not dealt with Multiplayer in Unreal Engine before, so to learn how to create multiplayer, I will look at both YouTube videos and Unreal documentation to get a good understanding on how to get it working.
+
 
 ---
-- Publishing for Steam. Working with the Steamworks API
-- I need to make sure I am compliant with Valve's Terms and Conditions and Service Agreements as a publishing platform. So I need to follow the API guidelines.
+
+Publishing for Steam
+Depending on how the project goes, I may be publishing my game to the Steamworks API. If this is the case, then I must ensure that I am am compliant with Valve's terms & conditions and service agreements as a publishing platform. So I need to follow the API guidelines.
+
+
 
 
 ## Game Sources  
@@ -49,11 +55,11 @@ I want to publish this game professionally, working with professional pipelines 
 ```
 ### Metroid Prime
 Metroid Prime is a Sci-Fi first person shooter developed by Retro Studios Metroid Prime (2002).
-*Metroid Prime* is considered one of the best video game experiences of all time and the top GameCube game according to IGN(The 25 Best GameCube Games of All Time - IGN, s.d.).
+*Metroid Prime* is considered one of the best video game experiences of all time and the top GameCube game according to IGN (The 25 Best GameCube Games of All Time - IGN, 2023).
 
-The level design in Metroid Prime features large environments comprised of multiple interconnected rooms. (The World Design of Metroid Prime | Boss Keys - YouTube, s.d.)
+The level design in Metroid Prime features large environments comprised of multiple interconnected rooms. (Boss Keys - YouTube, 2019)
 The level design is largely non-linear, there are a lot of paths the player can follow, some take them to other areas of the map, and some areas feature small challenges that the player can complete to get extra items.
-<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_Environment.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/MP_Environment.png?raw=true" width="75%"/>
 
 
 <small>Figure 1: Showcase of the Environment in Metroid Prime. The player has multiple directions they can take throughout the level. They can climb up the stairs off to their right and cross over the bridge, head underneath the bridge, or head down the tunnel to the right to find a save room. </small>
@@ -62,7 +68,7 @@ Alongside studying the environment of Metroid Prime, I also liked the fact that 
 
 The gameplay of Metroid Prime consists of combat, puzzle solving and exploration. The combat is divided into both shooting enemies as well as moving to avoid their attacks. This makes the combat in Metroid Prime feel more fluid and active than other more modern first person shooters that typically feature stationary cover-shooter combat centered around hiding behind walls, and then shooting enemies when you get the opportunity, which tends to make encounters blend together.
 
-<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_CombatExample.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/MP_CombatExample.png?raw=true" width="75%"/>
 
 <small>Figure 2: Example of Combat in Metroid Prime. The player is facing an armoured beetle that cannot be damaged from the front. They must strafe around it to avoid its charge attacks, and then attack its vulnerable back to defeat it. </small>
 
@@ -76,17 +82,17 @@ Bioshock is a story driven first person shooter developed by 2K Boston, released
 The gameplay of Bioshock is a mix of exploring the environment, solving small puzzles and learning about the game's world, and fast-paced first person gunplay. Featuring combining several different guns, and also magic powers such as blasts of electricity or grabbing objects with telekinesis. 
 The player is encouraged to experiment with numerous combinations of weapons and powers as many have different effects in combat, leaving it up to the player's inventiveness on how they wish to approach fights. (IGN, 2007).
 
-<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/Bioshock_Combat.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/Bioshock_Combat.png?raw=true" width="75%"/>
 
-<small>Figure x. Screenshot of Bioshock. The player experiments with a newfound weapon combination by stunning an enemy with electricity before shooting them, making them take more damage, rewarding them for their experimentation. </small>
+<small>Figure 3. Screenshot of Bioshock. The player experiments with a newfound weapon combination by stunning an enemy with electricity before shooting them, making them take more damage, rewarding them for their experimentation. </small>
 
 I studied the combat in Bioshock because I want to incentivise and reward players for getting creative at defeating enemies. Trying out different weapon combinations and approaching combat encounters differently can lead to an interesting form of replay value as well as keeping players entertained.
 
 The level design is a mix of large areas to explore, open arenas where the player has to fight numerous enemies, and optional side areas that contain challenges the player must overcome which reward them with items such as extra ammo, or money to spend.
 
-<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/Bioshock_Environment.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/Bioshock_Environment.png?raw=true" width="75%"/>
 
-<small>Figure x. Screenshot of Bioshock. The player can uncover the narrative of a large-scale conflict that left the city in ruin and decay, which is reflected in the environment as the player explores. </small>
+<small>Figure 4. Screenshot of Bioshock. The player can uncover the narrative of a large-scale conflict that left the city in ruin and decay, which is reflected in the environment as the player explores. </small>
 
 Studying the level design of Bioshock was great for learning how they manage to create several locations that all tell the story of an underwater utopia that fell to anarchy and ruin.
 
@@ -116,10 +122,6 @@ Since I wanted to create a local multiplayer mode in my game, I looked at Epic G
 
 I also looked at a few YouTube videos dedicated to creating basic multiplayer modes in Unreal Engine. The first video I looked at was about creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game.
 
-~~To learn how to create Multiplayer, I started by looking at Unreal Engine documentation at Epic Games (2025) which showed the basics of how to create a basic multiplayer mode, including adding other players to the level, and splitting the screen so the second player has a view. I encountered the problem that the second player was unable to be controlled by the second controller, so I looked at some YouTube videos to have a better understanding on how to get a multiplayer mode working.~~
-~~The first youtube video I looked at was a video on creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game. This helped to organise my existing code a little, but it did not solve the issue of the second player not receiving input.~~
-
-I watched a separate video which was about creating multiple players and assigning inputs to them in a fighting game by UNREAL ENGINE JOURNEY (2023). This video walked through creating multiple players at the start of the level, and assigning input mapping contexts to both of them, it also mentioned the important detail I was missing, that the input mapping context needs to be assigned to a different ID for each player (player one has an ID of 0, and player two has an ID of 1). I edited code and changed the script that adds multiple players to also assign a different ID to both of them. Doing this allowed the second player to work with a second controller.
 
 ## Implementation
 
@@ -134,6 +136,8 @@ My Prototype consisted of a basic first-person shooter, including movement, the 
 
 The project was 14 weeks long, so I used an Agile development methodology. Using the website Trello, I divided the time into 7 sprints each lasting two weeks and then I divided my tasks among each sprint so I could spend multiple weeks working on a few mechanics. This aligned with regular feedback sessions we would have in lessons where we would reflect on what we completed, and what we planned to do over the next few weeks.
 
+<a href="https://trello.com/b/ptuu1F31/final-major-project">Link to Trello Board</a>
+
 ## Weekly Breakdown
 
 ### Week 1-2
@@ -143,13 +147,47 @@ The project was 14 weeks long, so I used an Agile development methodology. Using
 - Respawning
 - Multiplayer objects (Weapon Swap System and Healing Station)
 
-#### Reworking Weapons into 2D Sprites
+Looking at the Documentation showed me the basics on creating a simple local multiplayer mode to my game. I learned what to adjust in the settings to change the splitscreen view to a vertical splitscreen instead of a horizontal one, and then how to add extra local players which I then set to be possessed. However I was facing difficulty with getting the second player to actually be controllable, so I had to look at some YouTube video tutorials as well to see how I could get it working.
 
-#### Camera Strafing
+The first youtube video I looked at  was a short demonstration on configuring the editor settings and adding a second player to the game. This helped to organise my existing code a little as it essentially recapped what I read about in the documentation, but it did not solve my issue of the second player not receiving input.
+
+I watched a separate video which was about creating multiple players and assigning inputs to them in a fighting game by UNREAL ENGINE JOURNEY (2023). This video walked through creating multiple players at the start of the level, and assigning input mapping contexts to both of them, it also mentioned the important detail I was missing, that the input mapping context needs to be assigned to a different ID for each player (player one has an ID of 0, and player two has an ID of 1), which I had not implemented so it was attempting to possess both characters with the same player ID. I edited code and changed the script that adds multiple players to also assign a different ID to both of them. Doing this allowed the second player to work with a second controller.
+
+This is the code that the multiplayer level executes to spawn multiple players. I controlled the amount of extra players it spawns via a separate integer variable, but it essentially just spawns in the initial character, and then spawns in the other player characters after that using an **Add local player** node, making sure they're all possesed correctly.
+
+<iframe src="https://blueprintue.com/render/1ix-1un3/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
+<img src="WriteupImages/MultiplayerPreview.png" width="75%"/>
+
+<small>Figure 5. The viewport in the multiplayer level. Two characters have spawned in, and are positioned so they are both looking at each other, demonstrating the success of the local co-op splitscreen view. </small>
+
+#### Reworking Weapons into 2D Sprites
+I turned the weapons into 2D sprites to make them easier to develop. During the prototype phase of the project I used 3D models for the weapons, however this made it harder to create multiple weapons due to having to model, texture, rig, and animate every weapon. Which was a lot of wasted time that I could have spent on other parts of the game.
+
+The weapons became a simple 2D flipbook of the weapon's firing animation. By default it idles on the first frame of the animation, and then plays when you shoot the weapon.
+
+<img src="WriteupImages/2DWeapon.png" height = 512px/>
+
+<small>Figure 6. In-game view of the pistol, the player's starting weapon. The pistol is now a 2D sprite instead of a 3D model. </small>
+
+#### Strafing Camera Tilt
+When working on my project in one of my lessons, my teacher Assad suggested that I should make it so that when the player moves from side to side, the camera tilts in that direction to make the camera feel more lively. I thought it was a great idea and started to work on it almost immediately.
+
+The code gets the player's velocity multiplied to their right vector, and adds the two values together. This returns the player's sideways velocity, which is then used to get the value of a curve float with different points at the maximum and minimum speed that the player can walk. Therefore, if the player walks left and their velocity is -525, the curve returns a value of -3, which is then set as the player camera's X rotation. 
+
+<iframe src="https://blueprintue.com/render/yk0lzuua/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
+
+<img src="WriteupImages/SidewaysCameraTilt.gif" width="75%"/>
+
+<small>Figure 7. Gif demonstration of the strafing camera tilt in action, the camera bends in the direction that the player is moving.</small>
 
 ### Week 3-4
 
-#### Changing Weapons
+#### Changing Weapons (Data Table)
+My first task for the next week was changing the weapon system from a series of switch statements to a Data table system. 
+
+I started by creating a struct containing everything related to the weapons such as their sprite flipbook, shoot sound, bullet to shoot, and shot particle.
 
 #### Lock-on System
 
@@ -157,7 +195,7 @@ I created a lock-on mechanic since both the player and enemies would be moving c
 
 Metroid Prime, being one of the main inspirations for my game, features the lock-on system to make up for the limitations of the console it was on. The player used the left stick for both moving and turning, and used the lock-on mechanic to focus on enemies to attack them.
 
-<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_LockOnExample.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/MP_LockOnExample.png?raw=true" width="75%"/>
 
 <small>Figure x. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small>
 
@@ -170,11 +208,20 @@ My initial lock-on mechanic used a **Get all Actors with Tag** node that I used 
 When I redesigned the lock-on system, I decided to use a box raycast to find any enemies that the player is looking at. Though I faced an apparent issue that the raycast would keep getting blocked by the environment, so I created a new collision type called "Lock-On Target" that could only be detected by the raycast.
 
 
-<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/LockOn_Showcase.gif" width="75%">
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/LockOn_Showcase.gif?raw=true" width="75%">
 
 <small>Figure x. Demonstration of Lock-On mechanic in-game. Note the visual effects that appear on-screen to indicate that the check for a valid lock-on target was successful. </small>
 
 #### Spline Pipe System
+I created a pipe system that the player can move through while in Slimeball mode. The pipe system creates a spline mesh, and then sets the position and curvature of the mesh based on the location and tangent of an attached spline. This allows me to bend, curve, and add as many points as I wish to the pipe to make them flow nicely.
+
+The construction script gets the number of spline points, and then for each index gets the location and tangent of that point for the starting position, then adds 1 to the point index to get the location and tangent of the next point to set as the end position.
+
+I had to subtract two from the count though, as I noticed that it counted the first and last points twice; the first point was calculated by default, and it was unnecessary to repeat the process for the last point, as the second to last point would set its end point to the last point's position anyway.
+
+<iframe src="https://blueprintue.com/render/b-obyc81/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
+<img src="WriteupImages/SplinePipe.png" width="75%"/>
 
 ### Week 5-6
 
@@ -210,6 +257,8 @@ When I redesigned the lock-on system, I decided to use a box raycast to find any
 ### Week 11-12
 
 #### Final Boss
+
+#### Fixed Camera System
 
 ### Week 13-14
 
@@ -263,13 +312,7 @@ Summary of Results
 - The question about whether or not players used the Lock-on mechanic was the most impacted by not being explained well enough in the game itself, as while the majority answered that they used it a lot or from time to time, at least 28% of the players said they didn't use the mechanic or even knew it existed.
 - The players liked the fact that the weapon selection was limited to 3 slots, as having several weapons available at once all with infinite ammo would've meant that some weapons would go practically unused.
 
-
-```
-- Summarise results with detail in an appendix;
-- The feedback for testing was: (100% think the player's default move speed is just right)
-- I focused on the more important issues
-```
-
+---
 
 Reflecting on the Data collection, a lot of the questions in the survey were Game Design related. Which ended up meaning a lot of the data in my survey wasn't all too helpful when it came to bug-fixing and improving mechanics. However after receiving the results, I decided to focus on the more major issues that players faced first, and then move towards the minor issues after that.
 
@@ -311,6 +354,8 @@ On another occasion I forgot to commit my code changes to Github, meaning when I
 - Ensure the link is publicly accessible or shared with the appropriate permissions.  
 - Include a brief description of the files provided, highlighting key components or any instructions required to run the project.
 ```
+<a href="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/tree/FinalMajorProject">Link to GitHub Repository for the source code</a>
+
 
 ### Build Link
 ```
@@ -318,6 +363,9 @@ On another occasion I forgot to commit my code changes to Github, meaning when I
 - Ensure the build is accessible across relevant platforms and is publicly accessible.  
 - Include any necessary instructions for running the build, such as system requirements or installation steps.
 ```
+<a href="https://11gscanlan.itch.io/slimeshock">Link to a playable build of the project on Itch.io</a>
+
+To run the build, simply download the .zip file in the download section at the bottom of the page. Then extract and run the slimeshock.exe file.
 
 ### Video Demonstration
 ```
@@ -326,27 +374,61 @@ On another occasion I forgot to commit my code changes to Github, meaning when I
 - Include a brief commentary or text overlay in the video to explain the different aspects of your project as they are shown.
 ```
 
+<a href="https://youtu.be/jkROO8pozGk">Link to a Video Walkthrough of my game on YouTube</a>
+
 ## Reflection
 
 ### Research Effectiveness  
+```
 - Assess the usefulness of the research conducted during the project.  
 - Highlight which sources (games, academic, documentation) had the most significant impact on your work and explain why.  
 - Identify any research gaps or areas where additional information could have improved your project outcomes.
+```
+On reflection, a lot of the research was useful during my project. Most of my time was spent making new mechanics I have not approached before.
+
+The most significant research method I found was the game sources, as I was able to study the game as I played it, gaining an understanding for how the game works as well as learning about it.
+
+The video tutorials were also very helpful, providing step-by-step commentaries on making new mechanics, as well as important things to keep in mind when making it yourself.
+
+The academic sources were not as helpful as it was difficult trying to find research relevant to local multiplayer games and the impact they have on the industry, which was what I was hoping to look at with the academic sources.
+
 
 ### Positive Analysis 
+```
 - Reflect on the successful aspects of the project.  
 - Highlight specific elements that worked well, such as technical solutions, creative decisions, or user feedback.  
 - Provide evidence to support your analysis, such as test results, screenshots, or user comments.
+```
+On reflection, I think the most successful aspect of the project overall was tasking myself to make the game as fun to play as possible, such as making the controls smooth and fun, and the combat fluid and engaging. I would say that I achieved this successfully, as the most valuable element of the implementation was the user testing, as I received a lot of positive in-person feedback from players who enjoyed playing my game, as well as the tester form rating most mechanics quite well.
+
+<img src="WriteupImages/TestFeedback_Positive.png" width="75%">
+
+<small>Figure x. Screenshot of Tester Feedback rating the player character. The rating is of 1-5. One player voted 1, though this was because originally 1 was the best, and 5 was the worst, but I was told that felt backwards so I changed it but kept the data. </small>
 
 ### Negative Analysis  
+```
 - Identify the areas of the project that did not go as planned or could have been improved.  
 - Discuss challenges you faced, whether technical, creative, or time-related, and evaluate their impact on the final product.  
 - Reflect on any mistakes or missteps and what you learned from them.
+```
+However, one area of the project that did not go so well was maintaining my focus on working on my project. There were times where I struggled to focus on development, which led to me falling behind on my projected outcomes and having to catch up on what I had intended to get finished in that time.
+
+I also fell ill during one of the first weeks of the project, which impacted the progress of the project as I wasn't able to work on it as much that week.
+
+One key misstep I faced was not getting enough recorded tester feedback earlier. As while I had players to test my project throughout the course of my development, I only had a form for testers to fill in during the last few weeks of the project. Meaning when it came time to evidence my tester feedback in the write-up, I only had the feedback I received from the last session.
 
 ### Next Time
+```
 - Outline what you would do differently if you were to undertake a similar project again.  
 - Suggest improvements to your workflow, research methods, or implementation process based on your reflections.  
 - Consider any new tools, techniques, or approaches you would explore in future projects to achieve better results.
+```
+One change if I was to do this project differently would be to prepare more in advance. A lot of issues stemmed from not factoring in potential delays or issues that arose during the course of development.
+
+Some improvements to my workflow and research methods could include working in smaller amounts more often to prevent causing me to lose focus on development. Also, I could have focused more on filling in the write-up earlier on, as I left that to the last few weeks, which meant a lot more time focusing on the write-up at the end of the unit.
+
+To achieve better results in future projects, I would definitely utilise GitHub more, as it is very helpful with working on multiple systems, as well as being able to backup my files to a repository that also has access to version control on the slight chance I make a big mistake and have to revert to a previous version of the project.
+I would also continue to use the organisation techniques I practiced as they were very helpful keeping my code tidy when I look back on it.
 
 ## Bibliography  
 ```markdown
@@ -355,25 +437,42 @@ On another occasion I forgot to commit my code changes to Github, meaning when I
 - Organise your references in alphabetical order. Alternatively, you may separate them by type (e.g., academic sources, games, videos), but consistency is key.
 ```
 
+#### Figure References
+
+Fig. 1 *Screenshot of Metroid Prime Environment* (2025) [Game still, Switch] In: Metroid Prime Remastered. Austin, Texas: Retro Studios
+
+Fig. 2 *Screenshot of Metroid Prime Combat* (2025) [Game still, Switch] In: Metroid Prime Remastered. Austin, Texas: Retro Studios
+
+Fig. 3 *Bioshock Combat* (2021) [YouTube video, screenshot] At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed 14/05/2025)
+
+Fig. 4 *Bioshock Environment* (2021) [YouTube video, screenshot] At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed 14/05/2025)
+
+#### Games
+
 ‘Metroid Prime’ (2002). Retro Studios.
 
 'Bioshock' (2007). 2K Boston.
+
+#### Game Reviews / Articles
 
 The 25 Best GameCube Games of All Time - IGN (s.d.) At: https://www.ign.com/articles/the-best-gamecube-games-of-all-time (Accessed  10/02/2025).
 
 The World Design of Metroid Prime | Boss Keys - YouTube (s.d.) At: https://www.youtube.com/watch?v=zyoGD6uwCmk (Accessed  10/02/2025).
 
-Pinchbeck, D. (2008) 'Story and recall in first person shooters' In: International Journal of Computer Games Technology pp.1–7.
 
 Flow and immersion in first-person shooters | Proceedings of the 2008 Conference on Future Play: Research, Play, Share (s.d.) At: https://dl.acm.org/doi/10.1145/1496984.1496998 (Accessed  10/03/2025).
 
-How to set up local/split-screen Multiplayer in Unreal Engine 5! (2023) At: https://www.youtube.com/watch?v=6aAQ5ttikgs (Accessed  12/02/2025).
+Testing Multiplayer in Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community (s.d.) At: https://dev.epicgames.com/documentation/en-us/unreal-engine/testing-multiplayer-in-unreal-engine (Accessed  11/03/2025).
 
-UE5 Fighting Game Tutorial: Local Multiplayer Game With 2 Gamepads | TrueFGE & Unreal Engine 5 (2023) At: https://www.youtube.com/watch?v=oonRBOBJcIo (Accessed  12/02/2025).
+#### YouTube Videos
 
-Fig x *Bioshock Combat* (2021) [YouTube video, screenshot] At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed 14/05/2025)
+The World Design of Metroid Prime | Boss Keys - YouTube (s.d.) At: https://www.youtube.com/watch?v=zyoGD6uwCmk (Accessed  10/02/2025).
 
-Fig x *Bioshock Environment* (2021) [YouTube video, screenshot] At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed 14/05/2025)
+How to set up local/split-screen Multiplayer in Unreal Engine 5! (2023) At: https://www.youtube.com/watch?v=6aAQ5ttikgs(Accessed  12/02/2025).
+
+UE5 Fighting Game Tutorial: Local Multiplayer Game With 2 Gamepads | TrueFGE & Unreal Engine 5 (2023) At:  https://www.youtube.com/watch?v=oonRBOBJcIo (Accessed  12/02/2025).
+
+
 
 
 
@@ -383,11 +482,13 @@ Fig x *Bioshock Environment* (2021) [YouTube video, screenshot] At: https://www.
 - Declare any use of AI tools (e.g., ChatGPT, GitHub Copilot, Meshy) or pre-existing code. Specify the purpose of these assets/tools and how they were integrated into your work.  
 - Ensure you clearly distinguish between your original work and any external contributions to maintain academic integrity.
 
+I used a sound pack that I found on OpenGameArt.org to replace all of the sound effects in my game with. The pack is in the public domain meaning I don't need to worry about crediting the artist in-game, though I have declared that none of the sounds are my own creation.
+
 SubspaceAudio (2016) 512 Sound Effects (8-bit style). [Sound] At: https://opengameart.org/content/512-sound-effects-8-bit-style (Accessed  14/05/2025).
 
-<small> I used a Public Domain sound pack to replace all of the template audio in my game. </small>
-
+The Final Boss of the game uses a digitally drawn image of a cat. While I made that image, I traced it from an image of a real cat.
 
 Jermbo_origin (s.d.) [Image] At: https://static.wikia.nocookie.net/regretevator/images/b/b9/Jermbo_origin.jpeg/revision/latest?cb=20240413165944 (Accessed 9/04/2025)
 
-<small> I used the original image as a reference to draw my own version that I used in-game. </small>
+
+<a href=""></a>
