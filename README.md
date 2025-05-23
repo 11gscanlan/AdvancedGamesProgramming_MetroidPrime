@@ -2,19 +2,10 @@
 
 ## Project Outline
 
-```markdown
-- Provide a concise description of the project, including its core concept and purpose.  
-- Outline the initial goals or objectives you aim to achieve.  
-- Identify any anticipated challenges or potential issues that may arise during development.
-```
+
 Slime Blast is a story-driven first person shooter with a sci-fi setting. The player controls a humanoid slime creature, and the gameplay revolves around the slime's ability to morph into and out of a smaller blob form that allows them to move around quicker, stick to walls, and squeeze through pipes and grates, which they would not be able to normally do. The gameplay also involves gunplay, as the player will encounter enemies that they must defeat by using various sci-fi weaponry found throughout the game.
 
-```
-- Sci-Fi first person shooter where you play as a humanoid slime creature.
-- I wanted to move away from my usual genre of 3D platformers and I have recently been playing first person shooters
-- I wish to include multiplayer but that's new to me.
-- I wish to publish this game professionally, working with professional pipelines (detail these later) (uploading builds to platforms, working with version control, etc.) 
-```
+
 I wanted to move away from my usual genre of 3D platforms, and I have recently been playing first person shooters, so I decided to choose that genre.
 I also want to include multiplayer as I felt nostalgic towards older games that had PVP multiplayer modes, pitting friends against each other in deathmatch or capture the flag modes.
 
@@ -24,35 +15,27 @@ I want to publish this game professionally, working with professional pipelines 
 
 ### Methodology  
 
-```markdown
-- Identify relevant sources for the project, including articles, documentation, talks, and games.  
-- Detail how these sources have informed your practical work and influenced your approach.
-```
 I have identified a few key challenges I will likely face while developing this project;
 
-Creating a Story Driven FPS
+#### Creating a Story Driven FPS
 I feel the best way to go about creating a story driven First-Person shooter will be by playing other story-driven games as well as reading articles about them to give me an understanding of how they are designed as well as the reception surrounding the games at the time and whether people enjoy them.
 
 ---
 
-Multiplayer in Unreal
+#### Multiplayer in Unreal
 I have not dealt with Multiplayer in Unreal Engine before, so to learn how to create multiplayer, I will look at both YouTube videos and Unreal documentation to get a good understanding on how to get it working.
 
 
 ---
 
-Publishing for Steam
+#### Publishing for Steam
 Depending on how the project goes, I may be publishing my game to the Steamworks API. If this is the case, then I must ensure that I am am compliant with Valve's terms & conditions and service agreements as a publishing platform. So I need to follow the API guidelines.
 
 
 
 
 ## Game Sources  
-```markdown
-- Conduct research on games that are relevant to your project. Provide a brief description of each game and the insights it offers.  
-- Analyse the game's approach, cross-referencing it with other sources such as articles or talks to support your analysis.  
-- Explain how these insights apply to your project and influence your decision-making process.
-```
+
 ### Metroid Prime
 Metroid Prime is a Sci-Fi first person shooter developed by Retro Studios Metroid Prime (2002).
 *Metroid Prime* is considered one of the best video game experiences of all time and the top GameCube game according to IGN (The 25 Best GameCube Games of All Time - IGN, 2023).
@@ -102,10 +85,7 @@ The player is given new weapons throughout the game to add more variety to their
 
 
 ### Academic Sources  
-```
-- Research academic papers, books, or articles that provide theoretical guidance for your project. Include a brief summary of each source.  
-- Describe how the academic research applies to your project and shapes your design and development decisions.
-```
+
 
 #### Flow and Immersion
 For an academic source, I chose to look at Flow and Immersion in First-Person shooters (Nacke and Lindley, 2008). The article reports the results of a psychological study about how different aspects of Half-Life 2 affected player's gameplay experience.
@@ -114,10 +94,7 @@ The study reported that players were more engaged when playtesting levels that w
 I chose to analyse this source as the level design would be a large factor in my game, and I want the player to feel engaged while playing my game, as boredom can greatly reduce their enjoyment. There should be a focus on making the level design interesting to explore and by also balancing the game's challenge, such as enemy vareity and difficulty, the frequency of health pickups, checkpoints and weapon unlocks.
 
 ### Documentation Sources  
-```
-- Investigate relevant documentation, tutorials, or instructional videos that provide technical insights into your tasks. Summarise the content and its relevance to your project.  
-- Explain how this technical knowledge supports your project work and guides your decision-making process.
-```
+
 Since I wanted to create a local multiplayer mode in my game, I looked at Epic Games' (2025) Unreal Engine documentation on how to create local and networked multiplayer (Unreal Engine 5.5 Documentation s.d.).
 
 I also looked at the Unreal Engine forums to see some common issues people were having with getting multiplayer working properly.
@@ -133,11 +110,6 @@ I watched a separate video which was about creating multiple players and assigni
 ## Implementation
 
 ### Process
-```
-- Provide a step-by-step breakdown of your development process, including key milestones and decisions made throughout the project.  
-- Highlight any tools, frameworks, or techniques used, and explain how they contributed to the implementation.  
-- Include screenshots, diagrams, or code snippets where relevant to showcase your progress.
-```
 
 My Prototype consisted of a basic first-person shooter, including movement, the weapons, and the ability to morph into a ball. 
 
@@ -150,9 +122,6 @@ The project was 14 weeks long, so I used an Agile development methodology. Using
 ### Week 1-2
 
 #### Multiplayer Prototyping
-- Spawning Multiple players (mention the Unreal Documentation since I couldn't get the second player to work right originally)
-- Respawning
-- Multiplayer objects (Weapon Swap System and Healing Station)
 
 Looking at the Documentation showed me the basics on creating a simple local multiplayer mode to my game. I learned what to adjust in the settings to change the splitscreen view to a vertical splitscreen instead of a horizontal one, and then how to add extra local players which I then set to be possessed. However I was facing difficulty with getting the second player to actually be controllable, so I had to look at some YouTube video tutorials as well to see how I could get it working.
 
@@ -164,7 +133,7 @@ This is the code that the multiplayer level executes to spawn multiple players. 
 
 <iframe src="https://blueprintue.com/render/1ix-1un3/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
-<img src="WriteupImages/MultiplayerPreview.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/MultiplayerPreview.png?raw=true" width="75%"/>
 
 <small>Figure 5. The viewport in the multiplayer level. Two characters have spawned in, and are positioned so they are both looking at each other, demonstrating the success of the local co-op splitscreen view. </small>
 
@@ -173,7 +142,7 @@ I turned the weapons into 2D sprites to make them easier to develop. During the 
 
 The weapons became a simple 2D flipbook of the weapon's firing animation. By default it idles on the first frame of the animation, and then plays when you shoot the weapon.
 
-<img src="WriteupImages/2DWeapon.png" height = 512px/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/2DWeapon.png?raw=true" height = 512px/>
 
 <small>Figure 6. In-game view of the pistol, the player's starting weapon. The pistol is now a 2D sprite instead of a 3D model. </small>
 
@@ -185,7 +154,7 @@ The code gets the player's velocity multiplied to their right vector, and adds t
 <iframe src="https://blueprintue.com/render/yk0lzuua/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
 
-<img src="WriteupImages/SidewaysCameraTilt.gif" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/SidewaysCameraTilt.gif?raw=true" width="75%"/>
 
 <small>Figure 7. Gif demonstration of the strafing camera tilt in action, the camera bends in the direction that the player is moving.</small>
 
@@ -195,11 +164,11 @@ The code gets the player's velocity multiplied to their right vector, and adds t
 My first task for the next week was changing the weapon system from a series of switch statements to a Data table system. 
 
 I started by creating a struct containing everything related to the weapons such as their sprite flipbook, shoot sound, bullet to shoot, and shot particle.
-<img src="WriteupImages/WeaponSystem_Struct.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/WeaponSystem_Struct.png?raw=true" width="75%"/>
 
 
 <small>Figure 8. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small>
-<img src="WriteupImages/WeaponSystem_DataTable.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/WeaponSystem_DataTable.png?raw=true" width="75%"/>
 
 
 <small>Figure 9. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small>
@@ -268,7 +237,7 @@ The HUD then uses this reference to keep track of the player's score, health, an
 
 <iframe src="https://blueprintue.com/render/x-hul6y-/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
-<img src="WriteupImages/DamageIndicator.gif" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/DamageIndicator.gif?raw=true" width="75%"/>
 
 <small>Figure 13. Showcase of the HUD tracking the player's health decreasing when they take damage. Also note the red flashing effect to indicate that the player is taking damage. </small>
 
@@ -295,13 +264,6 @@ I wanted to make a new enemy type. As I only had one type of enemy in the game. 
 #### Drone Code
 <iframe src="https://blueprintue.com/render/kj8jlp4p/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
-#### Enemy Behaviour Tree
-- Behaviour Tree Setup
-- Move Task
-- Shoot Task
-
-<iframe src="https://blueprintue.com/render/agtl70em/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
-
 
 ### Week 9-10
 
@@ -317,44 +279,50 @@ I wanted to have a definitive way to end the game, so I thought a fight against 
 
 I decided for a joke to have the boss be an image of a cat. Though I thought it better if I drew my own version using the image as reference. I put the original image in the declared assets since I used it as reference.
 
-<img src="WriteupImages/BossImage.png" width="75%"/>
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/BossImage.png?raw=true" width="75%"/>
 
 <small>Figure  14. Screenshot of the boss in-game</small>
 
 #### Fixed Camera System
+I wanted to create a system where the player enters a zone that causes the camera to stay in one location while looking at the player. To do this I created a blueprint with a box trigger and a camera. When the player enters the box, it sets the player's view over to the camera, which is constantly being told to look at the player while the camera is active.
 
 <iframe src="https://blueprintue.com/render/i6r1-_rk/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
-<img src="WriteupImages/FixedCamera.png" width="75%"/>
+Using this, I created a small side-room where the camera looks to the side of the player as they perform a small platforming challenge.
+
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/FixedCamera.png?raw=true" width="75%"/>
 
 <small>Figure 15. Demonstration of the Fixed Camera Angle pointing at the player from the corner of a room. </small>
 
 #### Scrap
+I wanted to give the player incentive to exploring the level, so I thought of a currency that the player could collect throughout the game, both for exploring and for defeating enemies too; Scrap. When the player gets close to the scrap, it overlaps a sphere collision that executes a line of code. The code lerps the scrap from its current position to the player's location, and then increases their scrap total by a random amount. The player could then theoretically use the scrap to purchase health or upgrades.
 <iframe src="https://blueprintue.com/render/2p9u5xlz/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
 ### Week 13-14
+Since it was the last few weeks, I got some more players to test my game, this gave me some valuable feedback (detailed below in the testing section), but also gave me a few ideas on extra mechanics to add.
 
-#### Mechanics based on Tester Feedback
+### Mechanics based on Tester Feedback
 
-- Hint Notifications
+#### Hint Notifications
+
+Some players could not understand mechanics due to them not being explained very well, or they were going too fast that they missed the explanation. So I created a script that spawns a widget with a hint box on it, pausing the game to get the player to read the hint.
+
 <iframe src="https://blueprintue.com/render/pbxgxtg7/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
-
-<img src="WriteupImages/HintPopup.png" width="75%"/>
+When the player overlaps the box, the hint popup that appears looks like this.
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/HintPopup.png?raw=true" width="75%"/>
 
 <small>Figure  16. One of the hint popups explaining how to jump.</small>
 
-- Hiding the player's helmet
+#### Hiding the player's helmet
+
+One player requested that I add an ability to hide the player's helmet. Since while it makes sense in-universe, it also makes the screen harder to see. So I made a test mechanic so that when the player hits T, the helmet disappears.
 <iframe src="https://blueprintue.com/render/kqtkc-uo/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
 ---
 
 ### New Approaches  
-```
-- Detail any innovative or new approaches you explored during the project.  
-- Explain why these approaches were chosen and how they differ from standard practices.  
-- Evaluate the success of these approaches, including any challenges faced and lessons learned.
-```
+
 
 During this project, I explored some new approaches while developing my project I started doing a lot more user testing than I usually would. As most class projects would consist of me making the game, and submitting it without conducting much user testing, as they were simply showcases of mechanics I have made. As such, I was expected to have other players test my game to make sure all of my mechanics were working correctly. As well as this, we were going to be publishing our project, and I wanted to make sure other players could easily understand how the game works.
 
@@ -365,10 +333,7 @@ Our teacher also showed us more industry standard techniques, I also learned to 
 I found it helpful as it helps me remind myself about mechanics I created earlier into the project when I return to the later, as I may have forgotten. This was a fairly common issue with projects I made earlier on in my course.
 
 ### Testing
-``` - Document the user testing conducted, specifying the type of tests used (e.g., automated testing, guided user testing, blind testing).  
-- Present feedback or issues identified during testing, using graphs, tables, or visual aids to summarise results.  
-- Describe how these issues were addressed. If any issues were not resolved, provide a clear justification for leaving them unaddressed.
-```
+
 Before getting other playtesters to test my game, I would conduct a lot of self testing. Making sure that all of the mechanics work properly and don't have any unexpected bugs.
 
 A lot of the testing in my project was guided user testing where I walked the players through the game, explaining important mechanics and what they need to do to progress. I also conducted some blind user testing, allowing the players to play my game without guidance from me, leaving it up to the player to figure out important mechanics and what they need to do, which was important as I wanted to make sure players could naturally figure out how to progress in the game.
@@ -409,12 +374,7 @@ There were some issues I decided would be better to not fix as they weren't a bi
 
 ---
 ### Technical Difficulties
-```
-- Identify any technical difficulties encountered during the implementation phase.  
-- Provide details on how these issues were diagnosed and resolved.  
-- If any difficulties remain unresolved, explain the impact on the project and any mitigation strategies used to minimise their effect.  
-- Reflect on what you would do differently in future projects to avoid similar issues.
-```
+
 During testing I would often face the issue of not being able to go back to the title screen after starting the game since I had not created a pause menu. I resolved that issue by creating a temporary debug level select so that I could go back to the title-screen or other levels whenever I wanted to.
 
 Another issue I faced was that during testing, the player could fall off the level, and since there was no kill barrier in place to reset them, the player would keep falling forever. To solve this, I created a button command that respawned the player if they fell off of the level.
@@ -429,41 +389,25 @@ On another occasion I forgot to commit my code changes to Github, meaning when I
 ## Outcomes
 
 ### Source Code/Project Files
-```
-- Provide a link to your complete source code or project files.  
-- Ensure the link is publicly accessible or shared with the appropriate permissions.  
-- Include a brief description of the files provided, highlighting key components or any instructions required to run the project.
-```
+
 <a href="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/tree/FinalMajorProject">Link to GitHub Repository for the source code</a>
 
 
 ### Build Link
-```
-- Share a link to a playable or executable build of your project.  
-- Ensure the build is accessible across relevant platforms and is publicly accessible.  
-- Include any necessary instructions for running the build, such as system requirements or installation steps.
-```
+
 <a href="https://11gscanlan.itch.io/slimeshock">Link to a playable build of the project on Itch.io</a>
 
 To run the build, simply download the .zip file in the download section at the bottom of the page. Then extract and run the slimeshock.exe file.
 
 ### Video Demonstration
-```
-- Embed a video or provide a link to a recorded demonstration of your project in action.  
-- The video should showcase key features, functionality, and any unique elements of your project.  
-- Include a brief commentary or text overlay in the video to explain the different aspects of your project as they are shown.
-```
+
 
 <a href="https://youtu.be/jkROO8pozGk">Link to a Video Walkthrough of my game on YouTube</a>
 
 ## Reflection
 
 ### Research Effectiveness  
-```
-- Assess the usefulness of the research conducted during the project.  
-- Highlight which sources (games, academic, documentation) had the most significant impact on your work and explain why.  
-- Identify any research gaps or areas where additional information could have improved your project outcomes.
-```
+
 On reflection, a lot of the research was useful during my project. Most of my time was spent making new mechanics I have not approached before.
 
 The most significant research method I found was the game sources, as I was able to study the game as I played it, gaining an understanding for how the game works as well as learning about it.
@@ -474,23 +418,15 @@ The academic sources were not as helpful as it was difficult trying to find rese
 
 
 ### Positive Analysis 
-```
-- Reflect on the successful aspects of the project.  
-- Highlight specific elements that worked well, such as technical solutions, creative decisions, or user feedback.  
-- Provide evidence to support your analysis, such as test results, screenshots, or user comments.
-```
-On reflection, I think the most successful aspect of the project overall was tasking myself to make the game as fun to play as possible, such as making the controls smooth and fun, and the combat fluid and engaging. I would say that I achieved this successfully, as the most valuable element of the implementation was the user testing, as I received a lot of positive in-person feedback from players who enjoyed playing my game, as well as the tester form rating most mechanics quite well.
 
-<img src="WriteupImages/TestFeedback_Positive.png" width="75%">
+I think the most successful aspect of the project overall was tasking myself to make the game as fun to play as possible, such as making the controls smooth and fun, and the combat fluid and engaging. I would say that I achieved this successfully, as the most valuable element of the implementation was the user testing, as I received a lot of positive in-person feedback from players who enjoyed playing my game, as well as the tester form rating most mechanics quite well.
+
+<img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/TestFeedback_Positive.png?raw=true" width="75%">
 
 <small>Figure 17. Screenshot of Tester Feedback rating the player character. The rating is of 1-5, where 5 is the best. The graph is crossed out because one player voted 1 in error due to misreading the scoring, this vote was meant to be a top-score. </small>
 
 ### Negative Analysis  
-```
-- Identify the areas of the project that did not go as planned or could have been improved.  
-- Discuss challenges you faced, whether technical, creative, or time-related, and evaluate their impact on the final product.  
-- Reflect on any mistakes or missteps and what you learned from them.
-```
+
 However, one area of the project that did not go so well was maintaining my focus on working on my project. There were times where I struggled to focus on development, which led to me falling behind on my projected outcomes and having to catch up on what I had intended to get finished in that time.
 
 I also fell ill during one of the first weeks of the project, which impacted the progress of the project as I wasn't able to work on it as much that week.
@@ -498,11 +434,7 @@ I also fell ill during one of the first weeks of the project, which impacted the
 One key misstep I faced was not getting enough recorded tester feedback earlier. As while I had players to test my project throughout the course of my development, I only had a form for testers to fill in during the last few weeks of the project. Meaning when it came time to evidence my tester feedback in the write-up, I only had the feedback I received from the last session.
 
 ### Next Time
-```
-- Outline what you would do differently if you were to undertake a similar project again.  
-- Suggest improvements to your workflow, research methods, or implementation process based on your reflections.  
-- Consider any new tools, techniques, or approaches you would explore in future projects to achieve better results.
-```
+
 One change if I was to do this project differently would be to prepare more in advance. A lot of issues stemmed from not factoring in potential delays or issues that arose during the course of development.
 
 Some improvements to my workflow and research methods could include working in smaller amounts more often to prevent causing me to lose focus on development. Also, I could have focused more on filling in the write-up earlier on, as I left that to the last few weeks, which meant a lot more time focusing on the write-up at the end of the unit.
@@ -511,11 +443,7 @@ To achieve better results in future projects, I would definitely utilise GitHub 
 I would also continue to use the organisation techniques I practiced as they were very helpful keeping my code tidy when I look back on it.
 
 ## Bibliography  
-```markdown
-- Compile a complete list of all sources referenced throughout your project. This may include articles, journals, videos, games, software, documentation, or any other materials.  
-- Ensure all references are formatted according to the [university's citation method](https://mylibrary.uca.ac.uk/referencing).  
-- Organise your references in alphabetical order. Alternatively, you may separate them by type (e.g., academic sources, games, videos), but consistency is key.
-```
+
 
 #### Figure References
 
@@ -527,38 +455,39 @@ Fig. 3 *Bioshock Combat* (2021) [YouTube video, screenshot] At: https://www.yout
 
 Fig. 4 *Bioshock Environment* (2021) [YouTube video, screenshot] At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed 14/05/2025)
 
-Fig. 5 
+Fig. 5 Scanlan, G. *screenshot of multiplayer level* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 6
+Fig. 6 Scanlan, G. *in-game view of the 2D pistol* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 7
+Fig. 7 Scanlan, G. *strafing camera tilt demonstration* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 8
+Fig. 8 Scanlan, G. *Screenshot of Weapon Data Struct* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 9
+Fig. 9 Scanlan, G. *Screenshot of Data Table* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 10
+Fig. 10 *Lock-on mechanic in metroid prime* (2025) [Game still, Switch] In: Metroid Prime Remastered. Austin, Texas: Retro Studios
 
-Fig. 11
+Fig. 11 Scanlan, G. *Demonstration of lock-on mechanic* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 12
+Fig. 12 Scanlan, G. *Example of Pipe Spline* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 13
+Fig. 13 Scanlan, G. *Showcase of HUD tracking health* (2025)
 
-Fig. 14
+Fig. 14 Scanlan, G. *Screenshot of the boss* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 15
+Fig. 15 Scanlan, G. *Demonstration of the Fixed Camera Angle* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 16
+Fig. 16 Scanlan, G. *Example Hint Popup* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
 
-Fig. 17
+Fig. 17 Scanlan, G. *Screenshot of Tester Feedback Table* (2025) [Unreal Engine, Screenshot] In possession of: The Author: Farnham.
+
 #### Games
 
 ‘Metroid Prime’ (2002). Retro Studios.
 
 'Bioshock' (2007). 2K Boston.
 
-#### Game Reviews / Articles
+#### Game Reviews / Articles / Documentation
 
 The 25 Best GameCube Games of All Time - IGN (s.d.) At: https://www.ign.com/articles/the-best-gamecube-games-of-all-time (Accessed  10/02/2025).
 
@@ -582,21 +511,17 @@ How to set up local/split-screen Multiplayer in Unreal Engine 5! (2023) At: http
 
 UE5 Fighting Game Tutorial: Local Multiplayer Game With 2 Gamepads | TrueFGE & Unreal Engine 5 (2023) At:  https://www.youtube.com/watch?v=oonRBOBJcIo (Accessed  12/02/2025).
 
-
-
+PS5 Bioshock Remastered - Full Game Walkthrough Longplay Playthrough Part 1 (2021) At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed  21/05/2025).
 
 
 ## Declared Assets
-- Provide a detailed list of any third-party assets used in the project.  
-- This includes asset packs, music, sound effects, 3D models, textures, scripts, or code from external sources.  
-- Declare any use of AI tools (e.g., ChatGPT, GitHub Copilot, Meshy) or pre-existing code. Specify the purpose of these assets/tools and how they were integrated into your work.  
-- Ensure you clearly distinguish between your original work and any external contributions to maintain academic integrity.
+
 
 I used a sound pack that I found on OpenGameArt.org to replace all of the sound effects in my game with. The pack is in the public domain meaning I don't need to worry about crediting the artist in-game, though I have declared that none of the sounds are my own creation.
 
 SubspaceAudio (2016) 512 Sound Effects (8-bit style). [Sound] At: https://opengameart.org/content/512-sound-effects-8-bit-style (Accessed  14/05/2025).
 
-The Final Boss of the game uses a digitally drawn image of a cat. While I made that image, I traced it from an image of a real cat.
+The Final Boss of the game uses my digitally drawn image of a cat. Though I traced it from a photo of a real cat.
 
 Jermbo_origin (s.d.) [Image] At: https://static.wikia.nocookie.net/regretevator/images/b/b9/Jermbo_origin.jpeg/revision/latest?cb=20240413165944 (Accessed 9/04/2025)
 
