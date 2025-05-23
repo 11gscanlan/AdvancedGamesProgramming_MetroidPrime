@@ -40,56 +40,55 @@ I want to publish this game professionally, working with professional pipelines 
 - Publishing for Steam. Working with the Steamworks API
 - I need to make sure I am compliant with Valve's Terms and Conditions and Service Agreements as a publishing platform. So I need to follow the API guidelines.
 
-### Game Sources  
+
+## Game Sources  
 ```markdown
 - Conduct research on games that are relevant to your project. Provide a brief description of each game and the insights it offers.  
 - Analyse the game's approach, cross-referencing it with other sources such as articles or talks to support your analysis.  
 - Explain how these insights apply to your project and influence your decision-making process.
 ```
-#### Metroid Prime
+### Metroid Prime
 Metroid Prime is a Sci-Fi first person shooter developed by Retro Studios Metroid Prime (2002).
 *Metroid Prime* is considered one of the best video game experiences of all time and the top GameCube game according to IGN(The 25 Best GameCube Games of All Time - IGN, s.d.).
 
 The level design in Metroid Prime features large environments comprised of multiple interconnected rooms. (The World Design of Metroid Prime | Boss Keys - YouTube, s.d.)
 The level design is largely non-linear, there are a lot of paths the player can follow, some take them to other areas of the map, and some areas feature small challenges that the player can complete to get extra items.
-<img src="WriteupImages/MP_Environment.png" width="75%"/>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_Environment.png" width="75%"/>
 
 
 <small>Figure 1: Showcase of the Environment in Metroid Prime. The player has multiple directions they can take throughout the level. They can climb up the stairs off to their right and cross over the bridge, head underneath the bridge, or head down the tunnel to the right to find a save room. </small>
 
+Alongside studying the environment of Metroid Prime, I also liked the fact that they contextualise the First Person Mechanic as an In-Helmet Viewpoint, and all of the information on-screen is being projected onto the helmet's visor. Sometimes you can even see the character's face reflected in the glass if you stare at a bright explosion. I took heavy inspiration from this when designing my character and taking into account the first person viewpoint.
+
 The gameplay of Metroid Prime consists of combat, puzzle solving and exploration. The combat is divided into both shooting enemies as well as moving to avoid their attacks. This makes the combat in Metroid Prime feel more fluid and active than other more modern first person shooters that typically feature stationary cover-shooter combat centered around hiding behind walls, and then shooting enemies when you get the opportunity, which tends to make encounters blend together.
 
-<img src="WriteupImages/MP_CombatExample.png" width="75%"/>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_CombatExample.png" width="75%"/>
 
 <small>Figure 2: Example of Combat in Metroid Prime. The player is facing an armoured beetle that cannot be damaged from the front. They must strafe around it to avoid its charge attacks, and then attack its vulnerable back to defeat it. </small>
 
-Since combat is going to be a large part of my game, I want to make sure the combat feels fluid and fast-paced to keep the game engaging for long periods of time.
+Since combat is going to be a large part of my game, I wanted to make sure the combat feels fluid and fast-paced to keep the game engaging, which is why I chose to look at Metroid Prime's combat, as while the game mainly consists of exploration, combat is always dotted throughout to give the player a dose of action (IGN, 2002).
 
-**(this is what i'm saying, this is what i've got to prove what i'm saying)**
+---
 
+### Bioshock
+Bioshock is a story driven first person shooter developed by 2K Boston, released in 2007. Since I was attempting to make a story-driven game, I chose to look at Bioshock as it is largely considered one of the best story-driven games of all time, with its unique underwater setting, engaging story and immersive environmental storytelling (IGN, 2007).
 
-```
+The gameplay of Bioshock is a mix of exploring the environment, solving small puzzles and learning about the game's world, and fast-paced first person gunplay. Featuring combining several different guns, and also magic powers such as blasts of electricity or grabbing objects with telekinesis. 
+The player is encouraged to experiment with numerous combinations of weapons and powers as many have different effects in combat, leaving it up to the player's inventiveness on how they wish to approach fights. (IGN, 2007).
 
-
-```
-
-
-#### Bioshock
-Bioshock is a story driven first person shooter developed by 2K Boston, released in 2007. The gameplay of Bioshock is a mix of exploring the environment, solving small puzzles and learning about the game's world, and fast-paced first person gunplay. Featuring combining several different guns, and also magic powers such as blasts of electricity or grabbing objects with telekinesis. The player is encouraged to experiment with different weapon/power combos to approach different scenarios (IGN, 2007).
-
-<img src="WriteupImages/Bioshock_Combat.png" width="75%"/>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/Bioshock_Combat.png" width="75%"/>
 
 <small>Figure x. Screenshot of Bioshock. The player experiments with a newfound weapon combination by stunning an enemy with electricity before shooting them, making them take more damage, rewarding them for their experimentation. </small>
 
-I wanted to look at this because I want to incentivise and reward players for getting creative at defeating enemies. Trying out different weapon combinations and approaching combat encounters differently can lead to an interesting form of replay value.
+I studied the combat in Bioshock because I want to incentivise and reward players for getting creative at defeating enemies. Trying out different weapon combinations and approaching combat encounters differently can lead to an interesting form of replay value as well as keeping players entertained.
 
-- Explain that I want to reward creativity with defeating enemies, different weapon combinations, etc.
+The level design is a mix of large areas to explore, open arenas where the player has to fight numerous enemies, and optional side areas that contain challenges the player must overcome which reward them with items such as extra ammo, or money to spend.
 
-The level design is fairly open, with a mix of large, open areas to explore, open arenas where the player has to fight numerous enemies, and optional side areas that pose challenges the player must overcome. They are then rewarded with items such as extra ammo, or money to spend on upgrades.
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/Bioshock_Environment.png" width="75%"/>
 
-<img src="WriteupImages/Bioshock_Environment.png" width="75%"/>
+<small>Figure x. Screenshot of Bioshock. The player can uncover the narrative of a large-scale conflict that left the city in ruin and decay, which is reflected in the environment as the player explores. </small>
 
-<small>Figure x. Screenshot of Bioshock. The environment is clearly in a state of disrepair, and there is an overwhelming sense of gloom and unease. </small>
+Studying the level design of Bioshock was great for learning how they manage to create several locations that all tell the story of an underwater utopia that fell to anarchy and ruin.
 
 The progression of Bioshock involves travelling to different areas with a set objective the player must reach, though how they reach that goal is up to them. There are usually multiple ways the player can reach the destination, such as different routes to take, or different approaches that affect what enemies they may encounter. 
 
@@ -103,21 +102,22 @@ The player is given new weapons throughout the game to add more variety to their
 ```
 
 #### Flow and Immersion
-For an academic source, I chose to look at Flow and Immersion in First-Person shooters Nacke, and Lindley’s (2010). The article reports the results of a psychological study about how different aspects of Half-Life 2 affects player's gameplay experience.
-The paper reports that players were more engaged when playing through levels that were designed for combat-oriented flow.
-The paper also reports boredom and how different aspects of the level design can lead to players getting bored, such as linear level deisgn, weak opponents with little visual variety, repeating textures and models, limited choices of weapons, or high amounts of rewards such as health, and ammo supplies.
+For an academic source, I chose to look at Flow and Immersion in First-Person shooters (Nacke and Lindley, 2008). The article reports the results of a psychological study about how different aspects of Half-Life 2 affected player's gameplay experience.
+The study reported that players were more engaged when playtesting levels that were designed for combat-orented flow, when compared to levels that featured empty levels, weak enemies with little visual variety, repeating textures and models, limited choice of weapons, and an overload of health and ammo supplies, leading to very little challenge and no sense of enjoyment.
 
-I chose to analyse this source as the level design is a large factor in my game, and I want to avoid having the player be constantly bored when playing my game, which means there should be a focus on making the level design interesting to explore, and also balancing the game's challenge, such as enemy vareity and difficulty, and also the frequency of health pickups, checkpoints and weapon unlocks.
+I chose to analyse this source as the level design would be a large factor in my game, and I want the player to feel engaged while playing my game, as boredom can greatly reduce their enjoyment. There should be a focus on making the level design interesting to explore and by also balancing the game's challenge, such as enemy vareity and difficulty, the frequency of health pickups, checkpoints and weapon unlocks.
 
 ### Documentation Sources  
 ```
 - Investigate relevant documentation, tutorials, or instructional videos that provide technical insights into your tasks. Summarise the content and its relevance to your project.  
 - Explain how this technical knowledge supports your project work and guides your decision-making process.
 ```
-Since I wanted to create a local multiplayer mode in my game, I looked at Unreal Engine documentation at Epic Games (2025).
+Since I wanted to create a local multiplayer mode in my game, I looked at Epic Games' (2025) Unreal Engine documentation on how to create local and networked multiplayer (Unreal Engine 5.5 Documentation s.d.).
 
-To learn how to create Multiplayer, I started by looking at Unreal Engine documentation at Epic Games (2025) which showed the basics of how to create a basic multiplayer mode, including adding other players to the level, and splitting the screen so the second player has a view. I encountered the problem that the second player was unable to be controlled by the second controller, so I looked at some YouTube videos to have a better understanding on how to get a multiplayer mode working.
-The first youtube video I looked at was a video on creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game. This helped to organise my existing code a little, but it did not solve the issue of the second player not receiving input.
+I also looked at a few YouTube videos dedicated to creating basic multiplayer modes in Unreal Engine. The first video I looked at was about creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game.
+
+~~To learn how to create Multiplayer, I started by looking at Unreal Engine documentation at Epic Games (2025) which showed the basics of how to create a basic multiplayer mode, including adding other players to the level, and splitting the screen so the second player has a view. I encountered the problem that the second player was unable to be controlled by the second controller, so I looked at some YouTube videos to have a better understanding on how to get a multiplayer mode working.~~
+~~The first youtube video I looked at was a video on creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game. This helped to organise my existing code a little, but it did not solve the issue of the second player not receiving input.~~
 
 I watched a separate video which was about creating multiple players and assigning inputs to them in a fighting game by UNREAL ENGINE JOURNEY (2023). This video walked through creating multiple players at the start of the level, and assigning input mapping contexts to both of them, it also mentioned the important detail I was missing, that the input mapping context needs to be assigned to a different ID for each player (player one has an ID of 0, and player two has an ID of 1). I edited code and changed the script that adds multiple players to also assign a different ID to both of them. Doing this allowed the second player to work with a second controller.
 
@@ -130,22 +130,34 @@ I watched a separate video which was about creating multiple players and assigni
 - Include screenshots, diagrams, or code snippets where relevant to showcase your progress.
 ```
 
-- My Prototype consisted of a basic first-person shooter, including movement, the weapons, and the ability to morph into a ball. 
-- So when creating my Final Major Project, I first started working on updating the player
+My Prototype consisted of a basic first-person shooter, including movement, the weapons, and the ability to morph into a ball. 
 
-### Player
+The project was 14 weeks long, so I used an Agile development methodology. Using the website Trello, I divided the time into 7 sprints each lasting two weeks and then I divided my tasks among each sprint so I could spend multiple weeks working on a few mechanics. This aligned with regular feedback sessions we would have in lessons where we would reflect on what we completed, and what we planned to do over the next few weeks.
 
-- Setup (viewmodel, helmet, etc.)
+## Weekly Breakdown
 
-- Slimeball
+### Week 1-2
 
-#### Lock-On
+#### Multiplayer Prototyping
+- Spawning Multiple players (mention the Unreal Documentation since I couldn't get the second player to work right originally)
+- Respawning
+- Multiplayer objects (Weapon Swap System and Healing Station)
+
+#### Reworking Weapons into 2D Sprites
+
+#### Camera Strafing
+
+### Week 3-4
+
+#### Changing Weapons
+
+#### Lock-on System
 
 I created a lock-on mechanic since both the player and enemies would be moving constantly, having a mechanic to lock the player's view to an enemy would greatly help the player with being able to land hits much easier. 
 
 Metroid Prime, being one of the main inspirations for my game, features the lock-on system to make up for the limitations of the console it was on. The player used the left stick for both moving and turning, and used the lock-on mechanic to focus on enemies to attack them.
 
-<img src="WriteupImages/MP_LockOnExample.png" width="75%"/>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_LockOnExample.png" width="75%"/>
 
 <small>Figure x. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small>
 
@@ -158,89 +170,115 @@ My initial lock-on mechanic used a **Get all Actors with Tag** node that I used 
 When I redesigned the lock-on system, I decided to use a box raycast to find any enemies that the player is looking at. Though I faced an apparent issue that the raycast would keep getting blocked by the environment, so I created a new collision type called "Lock-On Target" that could only be detected by the raycast.
 
 
-<img src="WriteupImages/LockOn_Showcase.gif" width="75%"/>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/LockOn_Showcase.gif" width="75%">
 
 <small>Figure x. Demonstration of Lock-On mechanic in-game. Note the visual effects that appear on-screen to indicate that the check for a valid lock-on target was successful. </small>
 
+#### Spline Pipe System
 
-#### HUD (Health, Current Weapon, etc)
+### Week 5-6
 
-### Pause Menu
+#### UI Design (HUD, Pause Menu)
 
-### Weapons
+#### Slimeball Abilities (Wall Jumping, Launching off of Ramps)
 
-- The weapon sprites are 2D Flipbooks, I created them this way to save time on development.
-- All of the weapon parameters are held in a data table, containing the sprites, firing noise, projectiles, and particle systems.
-- The Data table is accessed whenever the player swaps or fires their weapon.
+### Week 7-8
 
-### Projectiles
-
-- Movement
-
-- Damage
-
-### Components (Currency)
-I wanted to create a currency that the player can use to buy upgrades and weapons throughout the game to create an incentive to both explore, and fight enemies. When the player defeats enemies and explores the environment, they will encounter Components. These can be picked up by getting close to them, they will then fly towards the player.
-
-<iframe src="https://blueprintue.com/render/krpxksl9/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
-<small> Figure x. On Begin Overlap for Scrap's sphere; moves towards player, and then plays a particle, sound, and increases the player's scrap count by a random amount from 2-5. </small>
+#### Drone Enemy
+- Move to Location
+- Shoot at Player
 
 
+#### Enemy Behaviour Tree
+- Behaviour Tree Setup
+- Move Task
+- Shoot Task
 
 
-### Hook/Ropeswing
+#### Title Screen
+- Environment
+- Navigation buttons (Exit, Start Game, Multiplayer (Player Count Slider))
 
-### Enemies
-- AI: Movement
-- Ai: Shooting
-- Drone Enemy
+### Week 9-10
 
-### Objects
+#### Level Prototype
 
-- Pipe Crawlspace
+#### Inventory System
+- Displaying of weapon information
+- Switching weapon slots
 
-I created the pipe crawlspace by using a spline mesh.
+### Week 11-12
 
-- Fixed Camera Sections
+#### Final Boss
 
+### Week 13-14
+
+#### Mechanics based on Tester Feedback
+
+- Hint Notifications
+- Hiding the player's helmet
+
+---
 
 ### New Approaches  
+```
 - Detail any innovative or new approaches you explored during the project.  
 - Explain why these approaches were chosen and how they differ from standard practices.  
 - Evaluate the success of these approaches, including any challenges faced and lessons learned.
+```
+
+During this project, I explored some new approaches while developing my project I started doing a lot more user testing than I usually would. As most class projects would consist of me making the game, and submitting it without conducting much user testing, as they were simply showcases of mechanics I have made. As such, I was expected to have other players test my game to make sure all of my mechanics were working correctly. As well as this, we were going to be publishing our project, and I wanted to make sure other players could easily understand how the game works.
+
+The user testing in my project was very insightful, as I learned how other players approach a new game. Since I have been working on this project from the start, it’s very helpful to see how someone who has never seen the game before will react to mechanics in my game.
+
+Our teacher also showed us more industry standard techniques, I also learned to make my code easier to understand by keeping it organised and annotated throughout throughout so that anyone looking at my code could understand it much easier.
+
+I found it helpful as it helps me remind myself about mechanics I created earlier into the project when I return to the later, as I may have forgotten. This was a fairly common issue with projects I made earlier on in my course.
 
 ### Testing
 ``` - Document the user testing conducted, specifying the type of tests used (e.g., automated testing, guided user testing, blind testing).  
 - Present feedback or issues identified during testing, using graphs, tables, or visual aids to summarise results.  
 - Describe how these issues were addressed. If any issues were not resolved, provide a clear justification for leaving them unaddressed.
 ```
-Before getting other playtesters to test my game
-
-After players had tested my game, I set up a Google form that players could access by scanning a QR code on both the title screen and the victory screen after the game is complete. The form allowed the play testers to give feedback as well as rank how they feel about some of the mechanics in my game. Overall, I received a lot of good feedback, though there were some issues that players identified that I needed to address.
+Before getting other playtesters to test my game, I would conduct a lot of self testing. Making sure that all of the mechanics work properly and don't have any unexpected bugs.
 
 A lot of the testing in my project was guided user testing where I walked the players through the game, explaining important mechanics and what they need to do to progress. I also conducted some blind user testing, allowing the players to play my game without guidance from me, leaving it up to the player to figure out important mechanics and what they need to do, which was important as I wanted to make sure players could naturally figure out how to progress in the game.
 
+After players had tested my game, I set up a Google form that players could access by scanning a QR code on both the title screen and the victory screen after the game is complete. The form allowed the play testers to give feedback as well as rank how they feel about some of the mechanics in my game. Overall, I received a lot of good feedback, though there were some issues that players identified that I needed to address.
 
-I compiled my results into a spreadsheet to make the data easier to read.
 
----
+I compiled my results of the test into a spreadsheet.
+
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRbXxYJNSVEDSAm15R9XytUcPyPositSmVFDCkRcOeBNb4c_Qh3OBNLRB4v5YuPbLODLJ61KFN9y1M0/pubhtml?gid=934916183&amp;single=true&amp;widget=true&amp;headers=false" height= 512px width=100% allowfullscreen></iframe>
 <small>Figure x. The results of testers filling in my feedback form. </small>
 
----
+
+
+Summary of Results
+- 100% of players like the move speed of the humanoid character, however 42.9% of players think the Slimeball moved too fast.
+- 100% of players appreciated having a second jump in midair, as it helped to land precise jumps more easily.
+- 100% of players liked the fixed camera mechanic where the camera would shift to a new perspective when moving through pipes.
+- With the knowledge that the Slimeball mode is meant to be a limited time ability, 71.4% of players thought that the slimeball mode lasted too long.
+- The question about whether or not players used the Lock-on mechanic was the most impacted by not being explained well enough in the game itself, as while the majority answered that they used it a lot or from time to time, at least 28% of the players said they didn't use the mechanic or even knew it existed.
+- The players liked the fact that the weapon selection was limited to 3 slots, as having several weapons available at once all with infinite ammo would've meant that some weapons would go practically unused.
+
+
+```
 - Summarise results with detail in an appendix;
 - The feedback for testing was: (100% think the player's default move speed is just right)
 - I focused on the more important issues
+```
 
-Reflecting on the Data collection, a lot of the questions in the survey were Game Design related. Which ended up meaning a lot of the data in my survey wasn't all too helpful when it came to bug-fixing and improving mechanics.
+
+Reflecting on the Data collection, a lot of the questions in the survey were Game Design related. Which ended up meaning a lot of the data in my survey wasn't all too helpful when it came to bug-fixing and improving mechanics. However after receiving the results, I decided to focus on the more major issues that players faced first, and then move towards the minor issues after that.
 
 The playtesters felt the guns were unbalanced, some guns shot faster and dealt more damage making them superior over other guns, and some just weren't worth using.
 Alongside this, the testers thought that the character feels better to control in larger areas, as when they are required to perform tight platforming, the momentum can cause the character to fall off the platforms or overshoot. These issues were quite easy to fix as most of them could be easily changed by adjusting some variables in the code or character movement script.
 
-Some of the mechanics in the game weren’t explained very well due to having to read in-level text prompts that sometimes could be missed if the player was moving fast enough, which meant that blind testers sometimes didn’t know certain mechanics were in the game. I made a solution to this by having on-screen pop-ups appear explaining mechanics when they became necessary, such as when the player needed to double jump across a gap or shoot a button to open a door.
+Some of the mechanics in the game weren’t explained very well due to having to read in-level text prompts that sometimes could be missed if the player was too quickly through the level, which meant that blind testers sometimes didn’t know certain mechanics were in the game. I made a solution to this by having on-screen pop-ups appear explaining mechanics when they became necessary, such as when the player needed to double jump across a gap or how to approach combat mechanics such as Lock-on.
 
-The lack of sound in the game was also a common complaint as it made the game feel less impactful overall. This ended up being an issue with the PCs we were testing on, as they didn't have any audio output. I had implemented sound throughout development. But it was definitely something to keep in mind.
+The lack of sound in the game was also a common complaint, but that wasn't an issue I needed to fix since I already had sound in my game, the testers just couldn't hear it as the University PCs we were testing on didn't have sound output.
 
 One tester noted that the boss encounter door doesn’t lock after entering, allowing them to exit the arena and avoid fighting it. To have the boss door lock after the player entered, I added a box trigger in the world that locks the door after the player goes through it in the level blueprint.
 
@@ -260,15 +298,9 @@ Another issue I faced was that during testing, the player could fall off the lev
 
 Since I was publishing my game, I had to make sure all of the audio was fair-use and not copyrighted. Throughout the development of my game I had implemented a lot of copyrighted audio for testing purposes, but I had to solve the issue by finding websites dedicated to copyright free or Creative Commons audio and sound effects, such as opengameart.org, which I then used to replace all of the copyrighted audio in my game.
 
-- On one occasion I forgot to have my build ready, so I learned from that mistake.
-- While I didn't get around to doing the build, I learned from the experience by...
+On one occasion I forgot to have a build ready in time for my lesson that week, which meant that I could not test for errors that only show up in the builds. It was also difficult to create a build in the actual lesson since building for the first time on a new computer could take a couple of hours due to all of the assets it needs to compile. So while I didn't get around to making the build, I learned from the experience by remembering to create builds more often.
 
-Oftentimes I would forget to have a build ready for playtesting in my lessons each week, which meant that I could not test for errors that might only show up in the builds. I solved this by creating builds more often, but when I did not have a build ready, I would just test in the editor as trying to build my project for the first time on a new PC would take a few hours.
-
-- On another occasion I forgot to commit my code, which meant I had to...
-- I solved this issue by remote desktop and now I commit my code changes more regularly
-
-On a similar note, there were also a few times where I would forget to commit my code changes to Github, meaning when I logged on to the Uni computers to work on my game, I found that it was running a previous version of the game, lacking many of the changes I had made. Thankfully this issue was quite easily solved as I could remotely control my home desktop, and manually commit my code so I could sync it, and if I could not do that, then I would take a few minutes to go back home and do it there.
+On another occasion I forgot to commit my code changes to Github, meaning when I logged on to the Uni computers to work on my game, I found that it was running a previous version of the game, lacking many of the changes I had made. I solved this issue by using remote desktop to commit my changes from the classroom, and I decided to commit my code changes more regularly to avoid repeating this issue in the future.
 
 
 ## Outcomes
@@ -281,14 +313,18 @@ On a similar note, there were also a few times where I would forget to commit my
 ```
 
 ### Build Link
+```
 - Share a link to a playable or executable build of your project.  
 - Ensure the build is accessible across relevant platforms and is publicly accessible.  
 - Include any necessary instructions for running the build, such as system requirements or installation steps.
+```
 
 ### Video Demonstration
+```
 - Embed a video or provide a link to a recorded demonstration of your project in action.  
 - The video should showcase key features, functionality, and any unique elements of your project.  
 - Include a brief commentary or text overlay in the video to explain the different aspects of your project as they are shown.
+```
 
 ## Reflection
 

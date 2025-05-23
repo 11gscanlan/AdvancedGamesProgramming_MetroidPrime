@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="slime-blast-commentary">Slime Blast Commentary</h1>
+<h2 id="project-outline">Project Outline</h2>
+<pre class="hljs"><code><div><span class="hljs-bullet">- </span>Provide a concise description of the project, including its core concept and purpose.  
+<span class="hljs-bullet">- </span>Outline the initial goals or objectives you aim to achieve.  
+<span class="hljs-bullet">- </span>Identify any anticipated challenges or potential issues that may arise during development.
+</div></code></pre>
+<p>Slime Blast is a story-driven first person shooter with a sci-fi setting. The player controls a humanoid slime creature, and the gameplay revolves around the slime's ability to morph into and out of a smaller blob form that allows them to move around quicker, stick to walls, and squeeze through pipes and grates, which they would not be able to normally do. The gameplay also involves gunplay, as the player will encounter enemies that they must defeat by using various sci-fi weaponry found throughout the game.</p>
+<pre class="hljs"><code><div>- Sci-Fi first person shooter where you play as a humanoid slime creature.
+- I wanted to move away from my usual genre of 3D platformers and I have recently been playing first person shooters
+- I wish to include multiplayer but that's new to me.
+- I wish to publish this game professionally, working with professional pipelines (detail these later) (uploading builds to platforms, working with version control, etc.) 
+</div></code></pre>
+<p>I wanted to move away from my usual genre of 3D platforms, and I have recently been playing first person shooters, so I decided to choose that genre.
+I also want to include multiplayer as I felt nostalgic towards older games that had PVP multiplayer modes, pitting friends against each other in deathmatch or capture the flag modes.</p>
+<p>I want to publish this game professionally, working with professional pipelines (<em><strong>detail these later</strong></em>) such as uploading builds to platforms using Github, working with version control, <em><strong>etc</strong></em>.</p>
+<h2 id="research">Research</h2>
+<h3 id="methodology">Methodology</h3>
+<pre class="hljs"><code><div><span class="hljs-bullet">- </span>Identify relevant sources for the project, including articles, documentation, talks, and games.  
+<span class="hljs-bullet">- </span>Detail how these sources have informed your practical work and influenced your approach.
+</div></code></pre>
+<ul>
+<li>Story Driven FPS</li>
+<li>Both playing other story-driven games as well as reading articles about them will give me an understanding of how they are designed, as well as the reception surrounding the game at the time and whether people enjoy it.</li>
+</ul>
+<hr>
+<ul>
+<li>How to deal with multiplayer in Unreal</li>
+<li>I will be using both Youtube Videos and documentation to learn how to create Multiplayer.</li>
+</ul>
+<hr>
+<ul>
+<li>Publishing for Steam. Working with the Steamworks API</li>
+<li>I need to make sure I am compliant with Valve's Terms and Conditions and Service Agreements as a publishing platform. So I need to follow the API guidelines.</li>
+</ul>
+<h2 id="game-sources">Game Sources</h2>
+<pre class="hljs"><code><div><span class="hljs-bullet">- </span>Conduct research on games that are relevant to your project. Provide a brief description of each game and the insights it offers.  
+<span class="hljs-bullet">- </span>Analyse the game's approach, cross-referencing it with other sources such as articles or talks to support your analysis.  
+<span class="hljs-bullet">- </span>Explain how these insights apply to your project and influence your decision-making process.
+</div></code></pre>
+<h3 id="metroid-prime">Metroid Prime</h3>
+<p>Metroid Prime is a Sci-Fi first person shooter developed by Retro Studios Metroid Prime (2002).
+<em>Metroid Prime</em> is considered one of the best video game experiences of all time and the top GameCube game according to IGN(The 25 Best GameCube Games of All Time - IGN, s.d.).</p>
+<p>The level design in Metroid Prime features large environments comprised of multiple interconnected rooms. (The World Design of Metroid Prime | Boss Keys - YouTube, s.d.)
+The level design is largely non-linear, there are a lot of paths the player can follow, some take them to other areas of the map, and some areas feature small challenges that the player can complete to get extra items.
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_Environment.png" width="75%"/></p>
+<p><small>Figure 1: Showcase of the Environment in Metroid Prime. The player has multiple directions they can take throughout the level. They can climb up the stairs off to their right and cross over the bridge, head underneath the bridge, or head down the tunnel to the right to find a save room. </small></p>
+<p>Alongside studying the environment of Metroid Prime, I also liked the fact that they contextualise the First Person Mechanic as an In-Helmet Viewpoint, and all of the information on-screen is being projected onto the helmet's visor. Sometimes you can even see the character's face reflected in the glass if you stare at a bright explosion. I took heavy inspiration from this when designing my character and taking into account the first person viewpoint.</p>
+<p>The gameplay of Metroid Prime consists of combat, puzzle solving and exploration. The combat is divided into both shooting enemies as well as moving to avoid their attacks. This makes the combat in Metroid Prime feel more fluid and active than other more modern first person shooters that typically feature stationary cover-shooter combat centered around hiding behind walls, and then shooting enemies when you get the opportunity, which tends to make encounters blend together.</p>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_CombatExample.png" width="75%"/>
+<p><small>Figure 2: Example of Combat in Metroid Prime. The player is facing an armoured beetle that cannot be damaged from the front. They must strafe around it to avoid its charge attacks, and then attack its vulnerable back to defeat it. </small></p>
+<p>Since combat is going to be a large part of my game, I wanted to make sure the combat feels fluid and fast-paced to keep the game engaging, which is why I chose to look at Metroid Prime's combat, as while the game mainly consists of exploration, combat is always dotted throughout to give the player a dose of action (IGN, 2002).</p>
+<hr>
+<h3 id="bioshock">Bioshock</h3>
+<p>Bioshock is a story driven first person shooter developed by 2K Boston, released in 2007. Since I was attempting to make a story-driven game, I chose to look at Bioshock as it is largely considered one of the best story-driven games of all time, with its unique underwater setting, engaging story and immersive environmental storytelling (IGN, 2007).</p>
+<p>The gameplay of Bioshock is a mix of exploring the environment, solving small puzzles and learning about the game's world, and fast-paced first person gunplay. Featuring combining several different guns, and also magic powers such as blasts of electricity or grabbing objects with telekinesis.
+The player is encouraged to experiment with numerous combinations of weapons and powers as many have different effects in combat, leaving it up to the player's inventiveness on how they wish to approach fights. (IGN, 2007).</p>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/Bioshock_Combat.png" width="75%"/>
+<p><small>Figure x. Screenshot of Bioshock. The player experiments with a newfound weapon combination by stunning an enemy with electricity before shooting them, making them take more damage, rewarding them for their experimentation. </small></p>
+<p>I studied the combat in Bioshock because I want to incentivise and reward players for getting creative at defeating enemies. Trying out different weapon combinations and approaching combat encounters differently can lead to an interesting form of replay value as well as keeping players entertained.</p>
+<p>The level design is a mix of large areas to explore, open arenas where the player has to fight numerous enemies, and optional side areas that contain challenges the player must overcome which reward them with items such as extra ammo, or money to spend.</p>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/Bioshock_Environment.png" width="75%"/>
+<p><small>Figure x. Screenshot of Bioshock. The player can uncover the narrative of a large-scale conflict that left the city in ruin and decay, which is reflected in the environment as the player explores. </small></p>
+<p>Studying the level design of Bioshock was great for learning how they manage to create several locations that all tell the story of an underwater utopia that fell to anarchy and ruin.</p>
+<p>The progression of Bioshock involves travelling to different areas with a set objective the player must reach, though how they reach that goal is up to them. There are usually multiple ways the player can reach the destination, such as different routes to take, or different approaches that affect what enemies they may encounter.</p>
+<p>The player is given new weapons throughout the game to add more variety to their loadout. The player can also upgrade their weapons at any time throughout the game by visiting upgrade stations found throughout the environment, spending their money to make their current weapons more powerful.</p>
+<h3 id="academic-sources">Academic Sources</h3>
+<pre class="hljs"><code><div>- Research academic papers, books, or articles that provide theoretical guidance for your project. Include a brief summary of each source.  
+- Describe how the academic research applies to your project and shapes your design and development decisions.
+</div></code></pre>
+<h4 id="flow-and-immersion">Flow and Immersion</h4>
+<p>For an academic source, I chose to look at Flow and Immersion in First-Person shooters (Nacke and Lindley, 2008). The article reports the results of a psychological study about how different aspects of Half-Life 2 affected player's gameplay experience.
+The study reported that players were more engaged when playtesting levels that were designed for combat-orented flow, when compared to levels that featured empty levels, weak enemies with little visual variety, repeating textures and models, limited choice of weapons, and an overload of health and ammo supplies, leading to very little challenge and no sense of enjoyment.</p>
+<p>I chose to analyse this source as the level design would be a large factor in my game, and I want the player to feel engaged while playing my game, as boredom can greatly reduce their enjoyment. There should be a focus on making the level design interesting to explore and by also balancing the game's challenge, such as enemy vareity and difficulty, the frequency of health pickups, checkpoints and weapon unlocks.</p>
+<h3 id="documentation-sources">Documentation Sources</h3>
+<pre class="hljs"><code><div>- Investigate relevant documentation, tutorials, or instructional videos that provide technical insights into your tasks. Summarise the content and its relevance to your project.  
+- Explain how this technical knowledge supports your project work and guides your decision-making process.
+</div></code></pre>
+<p>Since I wanted to create a local multiplayer mode in my game, I looked at Epic Games' (2025) Unreal Engine documentation on how to create local and networked multiplayer (Unreal Engine 5.5 Documentation s.d.).</p>
+<p>I also looked at a few YouTube videos dedicated to creating basic multiplayer modes in Unreal Engine. The first video I looked at was about creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game.</p>
+<p>To learn how to create Multiplayer, I started by looking at Unreal Engine documentation at Epic Games (2025) which showed the basics of how to create a basic multiplayer mode, including adding other players to the level, and splitting the screen so the second player has a view. I encountered the problem that the second player was unable to be controlled by the second controller, so I looked at some YouTube videos to have a better understanding on how to get a multiplayer mode working.
+The first youtube video I looked at was a video on creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game. This helped to organise my existing code a little, but it did not solve the issue of the second player not receiving input.</p>
+<p>I watched a separate video which was about creating multiple players and assigning inputs to them in a fighting game by UNREAL ENGINE JOURNEY (2023). This video walked through creating multiple players at the start of the level, and assigning input mapping contexts to both of them, it also mentioned the important detail I was missing, that the input mapping context needs to be assigned to a different ID for each player (player one has an ID of 0, and player two has an ID of 1). I edited code and changed the script that adds multiple players to also assign a different ID to both of them. Doing this allowed the second player to work with a second controller.</p>
+<h2 id="implementation">Implementation</h2>
+<h3 id="process">Process</h3>
+<pre class="hljs"><code><div>- Provide a step-by-step breakdown of your development process, including key milestones and decisions made throughout the project.  
+- Highlight any tools, frameworks, or techniques used, and explain how they contributed to the implementation.  
+- Include screenshots, diagrams, or code snippets where relevant to showcase your progress.
+</div></code></pre>
+<p>My Prototype consisted of a basic first-person shooter, including movement, the weapons, and the ability to morph into a ball.</p>
+<p>The project was 14 weeks long, so I used an Agile development methodology. Using the website Trello, I divided the time into 7 sprints each lasting two weeks and then I divided my tasks among each sprint so I could spend mutliple weeks working on a few mechanics. This aligned with regular feedback sessions we would have in lessons where we would reflect on what we completed, and what we planned to do over the next few weeks.</p>
+<h2 id="weekly-breakdown">Weekly Breakdown</h2>
+<h3 id="week-1-2">Week 1-2</h3>
+<h4 id="multiplayer-prototyping">Multiplayer Prototyping</h4>
+<ul>
+<li>Spawning Multiple players (mention the Unreal Documentation as I couldn't get the second player to work right originally)</li>
+<li>Respawning</li>
+<li>Multiplayer objects (Weapon Swap System and Healing Station)</li>
+</ul>
+<h4 id="reworking-weapons-into-2d-sprites">Reworking Weapons into 2D Sprites</h4>
+<h4 id="camera-strafing">Camera Strafing</h4>
+<h3 id="week-3-4">Week 3-4</h3>
+<h4 id="changing-weapons">Changing Weapons</h4>
+<h4 id="lock-on-system">Lock-on System</h4>
+<p>I created a lock-on mechanic since both the player and enemies would be moving constantly, having a mechanic to lock the player's view to an enemy would greatly help the player with being able to land hits much easier.</p>
+<p>Metroid Prime, being one of the main inspirations for my game, features the lock-on system to make up for the limitations of the console it was on. The player used the left stick for both moving and turning, and used the lock-on mechanic to focus on enemies to attack them.</p>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/MP_LockOnExample.png" width="75%"/>
+<p><small>Figure x. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small></p>
+<p>My initial lock-on mechanic used a <strong>Get all Actors with Tag</strong> node that I used to find actors with the lock-on tag, then using a <strong>For Each Loop</strong> to find the closest actor that was also on-screen. However I quickly found that since it was collecting references for every actor that had the tag regardless of where they were in the level, the mechanic was quite performance heavy and would sometimes cause the game to stutter for a second when there was a large amount of enemies present in the level.</p>
+<iframe src="https://blueprintue.com/render/4_7s5gqu/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+<p><small> Figure x. Event tick loop, keeps focusing on the locked actor so long as the actor is still relevant and the player hasn't released the keybind. </small></p>
+<p>When I redesigned the lock-on system, I decided to use a box raycast to find any enemies that the player is looking at. Though I faced an apparent issue that the raycast would keep getting blocked by the environment, so I created a new collision type called &quot;Lock-On Target&quot; that could only be detected by the raycast.</p>
+<img src="https://raw.githubusercontent.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/refs/heads/FinalMajorProject/WriteupImages/LockOn_Showcase.gif" width="75%">
+<p><small>Figure x. Demonstration of Lock-On mechanic in-game. Note the visual effects that appear on-screen to indicate that the check for a valid lock-on target was successful. </small></p>
+<h4 id="spline-pipe-system">Spline Pipe System</h4>
+<h3 id="week-5-6">Week 5-6</h3>
+<h4 id="ui-design-hud-pause-menu">UI Design (HUD, Pause Menu)</h4>
+<h4 id="slimeball-abilities-wall-jumping">Slimeball Abilities (Wall Jumping)</h4>
+<h3 id="week-7-8">Week 7-8</h3>
+<h4 id="drone-enemy">Drone Enemy</h4>
+<h4 id="enemy-behaviour-tree">Enemy Behaviour Tree</h4>
+<h4 id="title-screen">Title Screen</h4>
+<h3 id="week-9-10">Week 9-10</h3>
+<h4 id="level-prototype">Level Prototype</h4>
+<h4 id="inventory-system">Inventory System</h4>
+<h3 id="week-11-12">Week 11-12</h3>
+<h4 id="final-boss">Final Boss</h4>
+<h3 id="week-13-14">Week 13-14</h3>
+<h4 id="mechanics-based-on-tester-feedback">Mechanics based on Tester Feedback</h4>
+<ul>
+<li>Hint Notifications</li>
+<li>Hiding the player's helmet</li>
+</ul>
+<hr>
+<h3 id="new-approaches">New Approaches</h3>
+<pre class="hljs"><code><div>- Detail any innovative or new approaches you explored during the project.  
+- Explain why these approaches were chosen and how they differ from standard practices.  
+- Evaluate the success of these approaches, including any challenges faced and lessons learned.
+</div></code></pre>
+<p>During this project, I explored some new approaches while developing my project, as this was my final major project, I started doing a lot more user testing than I usually would. As most class projects would consist of me making the game, and submitting it without conducting much user testing, as they were simply showcases of mechanics I have made.</p>
+<p>I chose to conduct more user testing than usual as this was my final major project, and as such I was expected to have other players test my game to make sure all of my mechanics were working correctly. As well as this, we were going to be publishing our project, and I wanted to make sure other players could easily understand how the game works.</p>
+<p>The user testing in my project was very helpful, as I learned valuable insights into how other players approach a new game. Since I have been working on this project from the start, I fully understand how the mechanics in my game work, so it’s very helpful to see how someone who has never seen the game before will react to mechanics in my game.</p>
+<p>I also learned new formatting techniques for my code, keeping it more organised and easier to understand, and also annotated throughout so that anyone looking at my code could understand it much easier.</p>
+<p>I chose to keep my code more organised as my teacher was teaching us more industry standard techniques as we will be about to leave university and start finding careers, such as keeping my code tidy and organised so that other people can easily understand how my mechanics work.</p>
+<p>I found it helpful to keep my code tidy, as alongside making it easier for other people to view my code, it also helped me remind myself about mechanics I created earlier into the project when I return to them later, as without them I may have forgotten how they work. Which I have definitely faced when returning to older university projects I have created which are far less organised</p>
+<h3 id="testing">Testing</h3>
+<pre class="hljs"><code><div>- Present feedback or issues identified during testing, using graphs, tables, or visual aids to summarise results.  
+- Describe how these issues were addressed. If any issues were not resolved, provide a clear justification for leaving them unaddressed.
+</div></code></pre>
+<p>Before getting other playtesters to test my game</p>
+<p>I chose to conduct more user testing than usual as this was my final major project, and as such I was expected to have other players test my game to make sure all of my mechanics were working correctly, as we were going to be publishing our project, and I wanted to make sure other players could easily understand how the game works.</p>
+<p>After players had tested my game, I set up a Google form that players could access by scanning a QR code on both the title screen and the victory screen after the game is complete. The form allowed the play testers to give feedback as well as rank how they feel about some of the mechanics in my game. Overall, I received a lot of good feedback, though there were some issues that players identified that I needed to address.</p>
+<p>A lot of the testing in my project was guided user testing where I walked the players through the game, explaining important mechanics and what they need to do to progress. I also conducted some blind user testing, allowing the players to play my game without guidance from me, leaving it up to the player to figure out important mechanics and what they need to do, which was important as I wanted to make sure players could naturally figure out how to progress in the game.</p>
+<p>I compiled my results into a spreadsheet to make the data easier to read.</p>
+<hr>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRbXxYJNSVEDSAm15R9XytUcPyPositSmVFDCkRcOeBNb4c_Qh3OBNLRB4v5YuPbLODLJ61KFN9y1M0/pubhtml?gid=934916183&amp;single=true&amp;widget=true&amp;headers=false" height= 512px width=100% allowfullscreen></iframe>
+<small>Figure x. The results of testers filling in my feedback form. </small>
+<hr>
+<ul>
+<li>100% of players like the move speed of the character, however 42.9% of players think the Slimeball moved too fast.</li>
+<li>100% of players appreciated having a second jump in midair, as it helped to land precise jumps more easily.</li>
+<li>100% of players liked the fixed camera mechanic where the camera would shift to a new perspective when moving through pipes.</li>
+<li>With the knowledge that the Slimeball mode is meant to be a limited time ability, 71.4% of players thought that the slimeball mode lasted too long.</li>
+<li>The question about whether or not players used the Lock-on mechanic was the most impacted by not being explained well enough in the game itself, as while the majority answered that they used it a lot or from time to time, at least 28% of the players said they didn't use the mechanic or even knew it existed.</li>
+<li>The players liked the fact that the weapon selection was limited to 3 slots, as having several weapons available at once all with infinite ammo would've meant that some weapons would go practically unused.</li>
+</ul>
+<pre class="hljs"><code><div>- Summarise results with detail in an appendix;
+- The feedback for testing was: (100% think the player's default move speed is just right)
+- I focused on the more important issues
+</div></code></pre>
+<p>Reflecting on the Data collection, a lot of the questions in the survey were Game Design related. Which ended up meaning a lot of the data in my survey wasn't all too helpful when it came to bug-fixing and improving mechanics. However after recieving the results, I decided to focus on the more major issues that players faced first, and then move towards the minor issues after that.</p>
+<p>The playtesters felt the guns were unbalanced, some guns shot faster and dealt more damage making them superior over other guns, and some just weren't worth using.
+Alongside this, the testers thought that the character feels better to control in larger areas, as when they are required to perform tight platforming, the momentum can cause the character to fall off the platforms or overshoot. These issues were quite easy to fix as most of them could be easily changed by adjusting some variables in the code or character movement script.</p>
+<p>Some of the mechanics in the game weren’t explained very well due to having to read in-level text prompts that sometimes could be missed if the player was moving fast enough, which meant that blind testers sometimes didn’t know certain mechanics were in the game. I made a solution to this by having on-screen pop-ups appear explaining mechanics when they became necessary, such as when the player needed to double jump across a gap or shoot a button to open a door.</p>
+<p>The lack of sound in the game was also a common complaint as it made the game feel less impactful overall. This ended up being an issue with the PCs we were testing on, as they didn't have any audio output. I had implemented sound throughout development. But it was definitely something to keep in mind.</p>
+<p>One tester noted that the boss encounter door doesn’t lock after entering, allowing them to exit the arena and avoid fighting it. To have the boss door lock after the player entered, I added a box trigger in the world that locks the door after the player goes through it in the level blueprint.</p>
+<p>There were some issues I decided would be better to not fix as they weren't a big priority, one common issue being the level design and how the player could skip most of the combat encounters.  Whilst it was a good issue to raise, I thought it was best to prioritise my time with more major issues with the mechanics, as this was an issue with the level design which was a prototype blockout.</p>
+<hr>
+<h3 id="technical-difficulties">Technical Difficulties</h3>
+<pre class="hljs"><code><div>- Identify any technical difficulties encountered during the implementation phase.  
+- Provide details on how these issues were diagnosed and resolved.  
+- If any difficulties remain unresolved, explain the impact on the project and any mitigation strategies used to minimise their effect.  
+- Reflect on what you would do differently in future projects to avoid similar issues.
+</div></code></pre>
+<p>During testing I would often face the issue of not being able to go back to the title screen after starting the game since I had not created a pause menu. I resolved that issue by creating a temporary debug level select so that I could go back to the title-screen or other levels whenever I wanted to.</p>
+<p>Another issue I faced was that during testing, the player could fall off the level, and since there was no kill barrier in place to reset them, the player would keep falling forever. To solve this, I created a button command that respawned the player if they fell off of the level.</p>
+<p>Since I was publishing my game, I had to make sure all of the audio was fair-use and not copyrighted. Throughout the development of my game I had implemented a lot of copyrighted audio for testing purposes, but I had to solve the issue by finding websites dedicated to copyright free or Creative Commons audio and sound effects, such as opengameart.org, which I then used to replace all of the copyrighted audio in my game.</p>
+<p>On one occasion I forgot to have a build ready in time for my lesson that week, which meant that I could not test for errors that only show up in the builds. It was also difficult to create a build in the actual lesson since building for the first time on a new computer could take a couple of hours due to all of the assets it needs to compile. So while I didn't get around to making the build, I learned from the experience by remembering to create builds more often.</p>
+<p>On another occasion I forgot to commit my code changes to Github, meaning when I logged on to the Uni computers to work on my game, I found that it was running a previous version of the game, lacking many of the changes I had made. I solved this issue by using remote desktop to commit my changes from the classroom, and I decided to commit my code changes more regularly to avoid repeating this issue in the future.</p>
+<h2 id="outcomes">Outcomes</h2>
+<h3 id="source-codeproject-files">Source Code/Project Files</h3>
+<pre class="hljs"><code><div>- Provide a link to your complete source code or project files.  
+- Ensure the link is publicly accessible or shared with the appropriate permissions.  
+- Include a brief description of the files provided, highlighting key components or any instructions required to run the project.
+</div></code></pre>
+<h3 id="build-link">Build Link</h3>
+<pre class="hljs"><code><div>- Share a link to a playable or executable build of your project.  
+- Ensure the build is accessible across relevant platforms and is publicly accessible.  
+- Include any necessary instructions for running the build, such as system requirements or installation steps.
+</div></code></pre>
+<h3 id="video-demonstration">Video Demonstration</h3>
+<pre class="hljs"><code><div>- Embed a video or provide a link to a recorded demonstration of your project in action.  
+- The video should showcase key features, functionality, and any unique elements of your project.  
+- Include a brief commentary or text overlay in the video to explain the different aspects of your project as they are shown.
+</div></code></pre>
+<h2 id="reflection">Reflection</h2>
+<h3 id="research-effectiveness">Research Effectiveness</h3>
+<ul>
+<li>Assess the usefulness of the research conducted during the project.</li>
+<li>Highlight which sources (games, academic, documentation) had the most significant impact on your work and explain why.</li>
+<li>Identify any research gaps or areas where additional information could have improved your project outcomes.</li>
+</ul>
+<h3 id="positive-analysis">Positive Analysis</h3>
+<ul>
+<li>Reflect on the successful aspects of the project.</li>
+<li>Highlight specific elements that worked well, such as technical solutions, creative decisions, or user feedback.</li>
+<li>Provide evidence to support your analysis, such as test results, screenshots, or user comments.</li>
+</ul>
+<h3 id="negative-analysis">Negative Analysis</h3>
+<ul>
+<li>Identify the areas of the project that did not go as planned or could have been improved.</li>
+<li>Discuss challenges you faced, whether technical, creative, or time-related, and evaluate their impact on the final product.</li>
+<li>Reflect on any mistakes or missteps and what you learned from them.</li>
+</ul>
+<h3 id="next-time">Next Time</h3>
+<ul>
+<li>Outline what you would do differently if you were to undertake a similar project again.</li>
+<li>Suggest improvements to your workflow, research methods, or implementation process based on your reflections.</li>
+<li>Consider any new tools, techniques, or approaches you would explore in future projects to achieve better results.</li>
+</ul>
+<h2 id="bibliography">Bibliography</h2>
+<pre class="hljs"><code><div><span class="hljs-bullet">- </span>Compile a complete list of all sources referenced throughout your project. This may include articles, journals, videos, games, software, documentation, or any other materials.  
+<span class="hljs-bullet">- </span>Ensure all references are formatted according to the [<span class="hljs-string">university's citation method</span>](<span class="hljs-link">https://mylibrary.uca.ac.uk/referencing</span>).  
+<span class="hljs-bullet">- </span>Organise your references in alphabetical order. Alternatively, you may separate them by type (e.g., academic sources, games, videos), but consistency is key.
+</div></code></pre>
+<p>‘Metroid Prime’ (2002). Retro Studios.</p>
+<p>'Bioshock' (2007). 2K Boston.</p>
+<p>The 25 Best GameCube Games of All Time - IGN (s.d.) At: https://www.ign.com/articles/the-best-gamecube-games-of-all-time (Accessed  10/02/2025).</p>
+<p>The World Design of Metroid Prime | Boss Keys - YouTube (s.d.) At: https://www.youtube.com/watch?v=zyoGD6uwCmk (Accessed  10/02/2025).</p>
+<p>Pinchbeck, D. (2008) 'Story and recall in first person shooters' In: International Journal of Computer Games Technology pp.1–7.</p>
+<p>Flow and immersion in first-person shooters | Proceedings of the 2008 Conference on Future Play: Research, Play, Share (s.d.) At: https://dl.acm.org/doi/10.1145/1496984.1496998 (Accessed  10/03/2025).</p>
+<p>How to set up local/split-screen Multiplayer in Unreal Engine 5! (2023) At: https://www.youtube.com/watch?v=6aAQ5ttikgs (Accessed  12/02/2025).</p>
+<p>UE5 Fighting Game Tutorial: Local Multiplayer Game With 2 Gamepads | TrueFGE &amp; Unreal Engine 5 (2023) At: https://www.youtube.com/watch?v=oonRBOBJcIo (Accessed  12/02/2025).</p>
+<p>Fig x <em>Bioshock Combat</em> (2021) [YouTube video, screenshot] At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed 14/05/2025)</p>
+<p>Fig x <em>Bioshock Environment</em> (2021) [YouTube video, screenshot] At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed 14/05/2025)</p>
+<h2 id="declared-assets">Declared Assets</h2>
+<ul>
+<li>Provide a detailed list of any third-party assets used in the project.</li>
+<li>This includes asset packs, music, sound effects, 3D models, textures, scripts, or code from external sources.</li>
+<li>Declare any use of AI tools (e.g., ChatGPT, GitHub Copilot, Meshy) or pre-existing code. Specify the purpose of these assets/tools and how they were integrated into your work.</li>
+<li>Ensure you clearly distinguish between your original work and any external contributions to maintain academic integrity.</li>
+</ul>
+<p>SubspaceAudio (2016) 512 Sound Effects (8-bit style). [Sound] At: https://opengameart.org/content/512-sound-effects-8-bit-style (Accessed  14/05/2025).</p>
+<p><small> I used a Public Domain sound pack to replace all of the template audio in my game. </small></p>
+<p>Jermbo_origin (s.d.) [Image] At: https://static.wikia.nocookie.net/regretevator/images/b/b9/Jermbo_origin.jpeg/revision/latest?cb=20240413165944 (Accessed 9/04/2025)</p>
+<p><small> I used the original image as a reference to draw my own version that I used in-game. </small></p>
+
+</body>
+</html>
