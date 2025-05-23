@@ -120,8 +120,15 @@ I chose to analyse this source as the level design would be a large factor in my
 ```
 Since I wanted to create a local multiplayer mode in my game, I looked at Epic Games' (2025) Unreal Engine documentation on how to create local and networked multiplayer (Unreal Engine 5.5 Documentation s.d.).
 
+I also looked at the Unreal Engine forums to see some common issues people were having with getting multiplayer working properly.
+
+(How do I create a split-screen game? - Programming & Scripting / Blueprint, 2015)
+
+(Any tutorials to make a local multiplayer game? - Programming & Scripting / Multiplayer & Networking, 2016)
+
 I also looked at a few YouTube videos dedicated to creating basic multiplayer modes in Unreal Engine. The first video I looked at was about creating a basic split-screen multiplayer mode in Unreal Engine by MikeTheTech (2023). The video was a short demonstration on configuring the editor settings and adding a second player to the game.
 
+I watched a separate video which was about creating multiple players and assigning inputs to them in a fighting game by UNREAL ENGINE JOURNEY (2023). This video walked through creating multiple players at the start of the level, and assigning input mapping contexts to both of them.
 
 ## Implementation
 
@@ -151,7 +158,7 @@ Looking at the Documentation showed me the basics on creating a simple local mul
 
 The first youtube video I looked at  was a short demonstration on configuring the editor settings and adding a second player to the game. This helped to organise my existing code a little as it essentially recapped what I read about in the documentation, but it did not solve my issue of the second player not receiving input.
 
-I watched a separate video which was about creating multiple players and assigning inputs to them in a fighting game by UNREAL ENGINE JOURNEY (2023). This video walked through creating multiple players at the start of the level, and assigning input mapping contexts to both of them, it also mentioned the important detail I was missing, that the input mapping context needs to be assigned to a different ID for each player (player one has an ID of 0, and player two has an ID of 1), which I had not implemented so it was attempting to possess both characters with the same player ID. I edited code and changed the script that adds multiple players to also assign a different ID to both of them. Doing this allowed the second player to work with a second controller.
+Another video I watched mentioned the important detail I was missing, that the input mapping context needs to be assigned to a different ID for each player (player one has an ID of 0, and player two has an ID of 1), which I had not implemented so it was attempting to possess both characters with the same player ID. I edited code and changed the script that adds multiple players to also assign a different ID to both of them. Doing this allowed the second player to work with a second controller.
 
 This is the code that the multiplayer level executes to spawn multiple players. I controlled the amount of extra players it spawns via a separate integer variable, but it essentially just spawns in the initial character, and then spawns in the other player characters after that using an **Add local player** node, making sure they're all possesed correctly.
 
@@ -188,6 +195,18 @@ The code gets the player's velocity multiplied to their right vector, and adds t
 My first task for the next week was changing the weapon system from a series of switch statements to a Data table system. 
 
 I started by creating a struct containing everything related to the weapons such as their sprite flipbook, shoot sound, bullet to shoot, and shot particle.
+<img src="WriteupImages/WeaponSystem_Struct.png" width="75%"/>
+
+
+<small>Figure 8. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small>
+<img src="WriteupImages/WeaponSystem_DataTable.png" width="75%"/>
+
+
+<small>Figure 9. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small>
+
+
+<iframe src="https://blueprintue.com/render/ibkhbjci/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
 
 #### Lock-on System
 
@@ -197,20 +216,31 @@ Metroid Prime, being one of the main inspirations for my game, features the lock
 
 <img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/MP_LockOnExample.png?raw=true" width="75%"/>
 
-<small>Figure x. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small>
+<small>Figure 10. The lock-on mechanic demonstrated in Metroid Prime. The player is fighting multiple flying enemies that dart around the screen shooting at the player. The lock-on system allows the player to constantly look at a targeted enemy, to make it much easier to hit them. </small>
 
 My initial lock-on mechanic used a **Get all Actors with Tag** node that I used to find actors with the lock-on tag, then using a **For Each Loop** to find the closest actor that was also on-screen. However I quickly found that since it was collecting references for every actor that had the tag regardless of where they were in the level, the mechanic was quite performance heavy and would sometimes cause the game to stutter for a second when there was a large amount of enemies present in the level.
 
+
+### Old Lock-on System
 <iframe src="https://blueprintue.com/render/4_7s5gqu/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
-<small> Figure x. Event tick loop, keeps focusing on the locked actor so long as the actor is still relevant and the player hasn't released the keybind. </small>
+<small> Event tick loop, keeps focusing on the locked actor so long as the actor is still relevant and the player hasn't released the keybind. </small>
 
 When I redesigned the lock-on system, I decided to use a box raycast to find any enemies that the player is looking at. Though I faced an apparent issue that the raycast would keep getting blocked by the environment, so I created a new collision type called "Lock-On Target" that could only be detected by the raycast.
 
+With the custom collison type working correctly, now I wanted to make sure the lock-on prioritised the right targets. So I made the check perform two raycasts. The first raycast is a smaller sized check that checks in the direction the player is looking, and then if that doesn't find any actors, then it performs a second check that has a much wider range. That way, the lock-on prioritises enemies the player is looking at, and if not, then any enemies nearby to where the player is looking.
 
+### Find Lock-on Target
+<iframe src="https://blueprintue.com/render/9fh7on7f/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
+Once a lock-on target has been found, the game then loops the main body, which consists of making the player look at the targeted actor, along with constantly checking whether the loop should continue. It checks if the actor has been destroyed, if it's off-screen, or whether the player can no longer see the actor. If any of these become true, then the loop breaks and the lock-on stops.
+
+### Main Lock-on loop
+<iframe src="https://blueprintue.com/render/oh7zfutz/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 <img src="https://github.com/11gscanlan/AdvancedGamesProgramming_MetroidPrime/blob/FinalMajorProject/WriteupImages/LockOn_Showcase.gif?raw=true" width="75%">
 
-<small>Figure x. Demonstration of Lock-On mechanic in-game. Note the visual effects that appear on-screen to indicate that the check for a valid lock-on target was successful. </small>
+
+<small>Figure 11. Demonstration of Lock-On mechanic in-game. Visual effects appear on-screen to indicate that the check for a valid lock-on target was successful, and follow the player's position. </small>
 
 #### Spline Pipe System
 I created a pipe system that the player can move through while in Slimeball mode. The pipe system creates a spline mesh, and then sets the position and curvature of the mesh based on the location and tangent of an attached spline. This allows me to bend, curve, and add as many points as I wish to the pipe to make them flow nicely.
@@ -223,49 +253,99 @@ I had to subtract two from the count though, as I noticed that it counted the fi
 
 <img src="WriteupImages/SplinePipe.png" width="75%"/>
 
+<small>Figure 12. One example of the spline pipe in the editor. The spline mesh follows the path created by the spline. </small>
+
 ### Week 5-6
 
 #### UI Design (HUD, Pause Menu)
+Next I wanted to create the player's HUD, for score and health tracking, as well as displaying other relevant information.
 
-#### Slimeball Abilities (Wall Jumping, Launching off of Ramps)
+Most of the variables are tracked by the player, so I had the player create a HUD widget on event begin play, while also providing it a reference to itself.
+
+The HUD then uses this reference to keep track of the player's score, health, and current weapons.
+
+### Get player health code
+
+<iframe src="https://blueprintue.com/render/x-hul6y-/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
+<img src="WriteupImages/DamageIndicator.gif" width="75%"/>
+
+<small>Figure 13. Showcase of the HUD tracking the player's health decreasing when they take damage. Also note the red flashing effect to indicate that the player is taking damage. </small>
+
+#### Extra Slimeball Features
+While in Slimeball mode, the player has access to a few extra features.
+
+When the player attempts to double jump in Slimeball mode, the game first does a short sphere trace forwards to see if they are facing a wall. If they are, then the Slimeball performs a wall jump instead, allowing them to gain extra distance. They can chain these jumps together to scale walls.
+
+### Wall Jump Code
+<iframe src="https://blueprintue.com/render/1dlr_lgs/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
+Originally, the camera in slimeball mode felt rather static, so I created a tracking camera system.
+While the player is in Slimeball mode and moving, the camera will track and follow the player, making the camera feel more fluid in Slimeball mode.
+
+### Tracking Camera Code
+<iframe src="https://blueprintue.com/render/2gr7ypvn/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
 ### Week 7-8
 
 #### Drone Enemy
-- Move to Location
-- Shoot at Player
 
+I wanted to make a new enemy type. As I only had one type of enemy in the game. I decided on a flying enemy being a hovering drone. The drone is stationary in the air on the occasion he moves to a random position near to where it started. It also occasionally fires projectiles at the player. The Drone is also a sprite, similar to the weapons, as it made it easier to focus more on the mechanics than making and animating a model.
+
+#### Drone Code
+<iframe src="https://blueprintue.com/render/kj8jlp4p/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
 #### Enemy Behaviour Tree
 - Behaviour Tree Setup
 - Move Task
 - Shoot Task
 
+<iframe src="https://blueprintue.com/render/agtl70em/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
-#### Title Screen
-- Environment
-- Navigation buttons (Exit, Start Game, Multiplayer (Player Count Slider))
 
 ### Week 9-10
 
 #### Level Prototype
+During Week 9-10, I worked on a level for players to play through, as up until that point I was working solely from a barren test level. The level is short, but features a starting tutorial section teaching the player basic mechanics such as movement and jumping, then introducing them to the slimeball mode. Lastly, the player is told about the basics of combat and is then pitted against a few enemies.
 
-#### Inventory System
-- Displaying of weapon information
-- Switching weapon slots
+
 
 ### Week 11-12
 
 #### Final Boss
+I wanted to have a definitive way to end the game, so I thought a fight against a boss would work. I didn't want to make anything too major, so the boss is essentially a larger, stronger version of the basic move/shoot enemy. It just has a lot more health and shoots faster for a bit longer.
+
+I decided for a joke to have the boss be an image of a cat. Though I thought it better if I drew my own version using the image as reference. I put the original image in the declared assets since I used it as reference.
+
+<img src="WriteupImages/BossImage.png" width="75%"/>
+
+<small>Figure  14. Screenshot of the boss in-game</small>
 
 #### Fixed Camera System
+
+<iframe src="https://blueprintue.com/render/i6r1-_rk/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
+<img src="WriteupImages/FixedCamera.png" width="75%"/>
+
+<small>Figure 15. Demonstration of the Fixed Camera Angle pointing at the player from the corner of a room. </small>
+
+#### Scrap
+<iframe src="https://blueprintue.com/render/2p9u5xlz/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
 ### Week 13-14
 
 #### Mechanics based on Tester Feedback
 
 - Hint Notifications
+<iframe src="https://blueprintue.com/render/pbxgxtg7/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
+
+
+<img src="WriteupImages/HintPopup.png" width="75%"/>
+
+<small>Figure  16. One of the hint popups explaining how to jump.</small>
+
 - Hiding the player's helmet
+<iframe src="https://blueprintue.com/render/kqtkc-uo/" height= 512px width=100% scrolling="no" allowfullscreen></iframe>
 
 ---
 
@@ -300,7 +380,7 @@ I compiled my results of the test into a spreadsheet.
 
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRbXxYJNSVEDSAm15R9XytUcPyPositSmVFDCkRcOeBNb4c_Qh3OBNLRB4v5YuPbLODLJ61KFN9y1M0/pubhtml?gid=934916183&amp;single=true&amp;widget=true&amp;headers=false" height= 512px width=100% allowfullscreen></iframe>
-<small>Figure x. The results of testers filling in my feedback form. </small>
+<small>The results of testers filling in my feedback form. </small>
 
 
 
@@ -403,7 +483,7 @@ On reflection, I think the most successful aspect of the project overall was tas
 
 <img src="WriteupImages/TestFeedback_Positive.png" width="75%">
 
-<small>Figure x. Screenshot of Tester Feedback rating the player character. The rating is of 1-5. One player voted 1, though this was because originally 1 was the best, and 5 was the worst, but I was told that felt backwards so I changed it but kept the data. </small>
+<small>Figure 17. Screenshot of Tester Feedback rating the player character. The rating is of 1-5, where 5 is the best. The graph is crossed out because one player voted 1 in error due to misreading the scoring, this vote was meant to be a top-score. </small>
 
 ### Negative Analysis  
 ```
@@ -447,6 +527,31 @@ Fig. 3 *Bioshock Combat* (2021) [YouTube video, screenshot] At: https://www.yout
 
 Fig. 4 *Bioshock Environment* (2021) [YouTube video, screenshot] At: https://www.youtube.com/watch?v=FTXJfa12VDM (Accessed 14/05/2025)
 
+Fig. 5 
+
+Fig. 6
+
+Fig. 7
+
+Fig. 8
+
+Fig. 9
+
+Fig. 10
+
+Fig. 11
+
+Fig. 12
+
+Fig. 13
+
+Fig. 14
+
+Fig. 15
+
+Fig. 16
+
+Fig. 17
 #### Games
 
 ‘Metroid Prime’ (2002). Retro Studios.
@@ -463,6 +568,11 @@ The World Design of Metroid Prime | Boss Keys - YouTube (s.d.) At: https://www.y
 Flow and immersion in first-person shooters | Proceedings of the 2008 Conference on Future Play: Research, Play, Share (s.d.) At: https://dl.acm.org/doi/10.1145/1496984.1496998 (Accessed  10/03/2025).
 
 Testing Multiplayer in Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community (s.d.) At: https://dev.epicgames.com/documentation/en-us/unreal-engine/testing-multiplayer-in-unreal-engine (Accessed  11/03/2025).
+
+How do I create a split-screen game? - Programming & Scripting / Blueprint (2015) At: https://forums.unrealengine.com/t/how-do-i-create-a-split-screen-game/321221 (Accessed  10/03/2025).
+
+Any tutorials to make a local multiplayer game? - Programming & Scripting / Multiplayer & Networking (2016) At: https://forums.unrealengine.com/t/any-tutorials-to-make-a-local-multiplayer-game/366051 (Accessed  10/03/2025).
+
 
 #### YouTube Videos
 
